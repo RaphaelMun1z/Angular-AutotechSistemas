@@ -71,7 +71,6 @@
     opacity: 1;
     transform: scale(1);
   }
-
   50% {
     opacity: 0.5;
     transform: scale(1.5);
@@ -79,7 +78,7 @@
 }
 
 .hero-h1 {
-  position: relative; /* allow absolute centering of child */
+  position: relative;
   font-size: clamp(30px, 5.5vw, 66px);
   font-weight: 900;
   font-style: italic;
@@ -136,73 +135,121 @@
   margin-top: 2px;
 }
 
-/* Dashboard */
-/* business type animation helpers */
-/* styled wrapper and animation classes */
+/* ═══ ROLETA DE TIPOS DE EMPRESA ═══ */
 .hero-type-wrap {
+  display: inline-block;
+  vertical-align: middle;
+  height: clamp(48px, 7vw, 84px); /* Escala junto com o H1 */
+  overflow: hidden;
+  margin-top: clamp(6px, 1vw, 10px);
+  min-width: clamp(250px, 35vw, 380px);
+}
+
+.hero-type-slider {
+  display: flex;
+  flex-direction: column;
+  animation: roulette 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.hero-type-item {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
-  background: rgba(255, 204, 0, 0.06);
-  border: 1px solid rgba(255, 204, 0, 0.22);
+  justify-content: center;
+  gap: clamp(8px, 1vw, 14px);
+  height: clamp(48px, 7vw, 84px); /* Mesma altura exata do wrap */
+  padding: 4px clamp(12px, 1.5vw, 18px);
   border-radius: 8px;
-  padding: 4px 18px 4px 10px;
-  position: absolute; /* center regardless of text-align */
-  left: 50%;
-  transform: translateX(-50%);
-  overflow: hidden;
-  transition:
-    border-color 0.4s,
-    background 0.4s;
-  min-width: 360px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  width: 100%;
 }
 
-.type-entering {
-  animation: typeEnter 0.25s ease-out forwards;
-}
-.type-leaving {
-  animation: typeLeave 0.25s ease-in forwards;
-}
-
-@keyframes typeEnter {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Força o texto herdar exatamente a fonte e tamanho do H1 */
+.hero-type-text {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-transform: inherit;
+  line-height: inherit;
 }
 
-@keyframes typeLeave {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-12px);
-  }
+.theme-mechanic {
+  background: rgba(255, 204, 0, 0.06);
+  border-color: rgba(255, 204, 0, 0.22);
+  color: #ffc600;
+}
+.theme-mechanic .hero-type-icon {
+  background: #ffc600;
+}
+
+.theme-center {
+  background: rgba(255, 180, 0, 0.06);
+  border-color: rgba(255, 180, 0, 0.22);
+  color: #ffb300;
+}
+.theme-center .hero-type-icon {
+  background: #ffb300;
+}
+
+.theme-paint {
+  background: rgba(255, 160, 0, 0.06);
+  border-color: rgba(255, 160, 0, 0.22);
+  color: #ffa000;
+}
+.theme-paint .hero-type-icon {
+  background: #ffa000;
+}
+
+.theme-oil {
+  background: rgba(255, 140, 0, 0.06);
+  border-color: rgba(255, 140, 0, 0.22);
+  color: #ff8f00;
+}
+.theme-oil .hero-type-icon {
+  background: #ff8f00;
 }
 
 .hero-type-icon {
-  width: 46px;
-  height: 46px;
+  width: clamp(34px, 4vw, 46px);
+  height: clamp(34px, 4vw, 46px);
   border-radius: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: background 0.4s;
 }
 
 .hero-type-icon i,
 .hero-type-icon svg {
-  width: 26px;
-  height: 26px;
+  width: clamp(18px, 2.5vw, 26px);
+  height: clamp(18px, 2.5vw, 26px);
   color: #fff;
 }
+
+@keyframes roulette {
+  0%,
+  15% {
+    transform: translateY(0);
+  }
+  25%,
+  40% {
+    transform: translateY(-20%);
+  }
+  50%,
+  65% {
+    transform: translateY(-40%);
+  }
+  75%,
+  90% {
+    transform: translateY(-60%);
+  }
+  100% {
+    transform: translateY(-80%);
+  }
+}
+
+/* ═══ DASHBOARD FAKE ═══ */
 .hero-dash-wrap {
   position: relative;
   z-index: 2;
@@ -273,7 +320,6 @@
   height: 14px;
   color: #fff;
 }
-
 .dsb-lt {
   font-weight: 800;
   font-size: 12.5px;
@@ -307,7 +353,6 @@
   background: #f5f5fb;
   color: #1a1a2e;
 }
-
 .dsb-i.on {
   background: #eef3ff;
   color: var(--blue);
@@ -375,7 +420,6 @@
   font-weight: 800;
   margin-bottom: 3px;
 }
-
 .dsb-up p {
   font-size: 8.5px;
   opacity: 0.8;
@@ -517,7 +561,6 @@
 .dash-body::-webkit-scrollbar {
   width: 3px;
 }
-
 .dash-body::-webkit-scrollbar-thumb {
   background: #ddd;
   border-radius: 2px;
@@ -628,17 +671,14 @@
   background: #eef3ff;
   color: var(--blue);
 }
-
 .kg {
   background: #edfbf2;
   color: #16a34a;
 }
-
 .kr {
   background: #fff0f2;
   color: var(--red);
 }
-
 .ko {
   background: #fff6ed;
   color: var(--orange);
@@ -657,13 +697,11 @@
   font-size: 9.5px;
   font-weight: 700;
 }
-
 .ddn {
   color: var(--red);
   font-size: 9.5px;
   font-weight: 700;
 }
-
 .dvs {
   color: #ccc;
   font-weight: 500;
@@ -690,7 +728,6 @@
   color: #1a1a2e;
   margin-bottom: 2px;
 }
-
 .dcv {
   font-size: 20px;
   font-weight: 900;
@@ -749,13 +786,11 @@
 .dbf.on {
   background: var(--blue);
 }
-
 .dbd {
   font-size: 7.5px;
   font-weight: 700;
   color: #ccc;
 }
-
 .dbd.on {
   color: var(--blue);
 }
@@ -782,11 +817,9 @@
 .ds-b {
   background: #eef3ff;
 }
-
 .ds-g {
   background: #edfbf2;
 }
-
 .ds-o {
   background: #fff6ed;
 }
@@ -805,12 +838,10 @@
   background: var(--blue);
   color: #fff;
 }
-
 .ds-g .dseg-ico {
   background: #16a34a;
   color: #fff;
 }
-
 .ds-o .dseg-ico {
   background: var(--orange);
   color: #fff;
@@ -820,13 +851,11 @@
   width: 9px;
   height: 9px;
 }
-
 .dseg-v {
   font-size: 13px;
   font-weight: 900;
   color: #1a1a2e;
 }
-
 .dseg-l {
   font-size: 7.5px;
   font-weight: 700;
@@ -899,38 +928,7 @@ table.dtbl {
   font-weight: 600;
 }
 
-.hero-type-icon {
-  width: 46px;
-  height: 46px;
-  border-radius: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: background 0.4s;
-}
-
-.hero-type-icon i,
-.hero-type-icon svg {
-  width: 26px;
-  height: 26px;
-  color: #fff;
-}
-
-/* Slide animation */
-@keyframes typeIn {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Stats band */
+/* ═══ STATS BAND ═══ */
 .stats-band {
   background: var(--red);
   padding: clamp(28px, 4vw, 44px) 20px;
@@ -985,29 +983,11 @@ table.dtbl {
   margin-top: 5px;
 }
 
-/* ═══ RESPONSIVO ═══ */
+/* ═══ RESPONSIVO OTIMIZADO ═══ */
 @media (max-width: 980px) {
-  .hero-type-wrap {
-    min-width: 320px;
-    padding: 4px 12px;
-    gap: 10px;
-  }
-
-  .hero-type-icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .hero-type-icon i,
-  .hero-type-icon svg {
-    width: 22px;
-    height: 22px;
-  }
-
   .stats-band-inner {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .stat-item:nth-child(n + 3):not(:last-child)::after {
     display: none;
   }
@@ -1015,19 +995,15 @@ table.dtbl {
   .dash {
     height: 420px;
   }
-
   .dsb {
     width: 120px;
   }
-
   .dash-kpis {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .dash-mid {
     grid-template-columns: 1fr;
   }
-
   .dash-bot {
     grid-template-columns: 1fr;
   }
@@ -1037,40 +1013,27 @@ table.dtbl {
   .hero {
     padding: clamp(80px, 10vw, 120px) 16px 0;
   }
-
   .hero-h1 {
     font-size: clamp(24px, 4.5vw, 48px);
     margin-bottom: 16px;
   }
-
   .hero-sub {
     max-width: 100%;
     margin: 0 auto 24px;
   }
-
   .hero-acts {
     gap: 10px;
   }
-
   .hero-stats {
     gap: 24px;
     margin-top: 20px;
   }
-
   .hero-stat-n {
     font-size: 18px;
   }
-
   .hero-stat-l {
     font-size: 9px;
   }
-
-  .hero-type-wrap {
-    min-width: 290px;
-    padding: 3px 10px;
-    gap: 10px;
-  }
-
   .hero-badge {
     font-size: 10px;
     padding: 5px 14px;
@@ -1079,26 +1042,23 @@ table.dtbl {
 
   .hero-dash-wrap {
     max-width: 95vw;
+    max-height: 50vh;
   }
-
   .dash {
     flex-direction: column;
     height: auto;
   }
-
   .dsb {
     width: 100%;
     border-right: none;
     border-bottom: 1px solid #e6e6f0;
     padding: 10px 12px;
   }
-
   .dsb-nav {
     flex-direction: row;
     overflow-x: auto;
     padding: 0;
   }
-
   .dsb-i {
     white-space: nowrap;
     padding: 4px 8px;
@@ -1107,30 +1067,18 @@ table.dtbl {
   .dash-main {
     overflow-x: auto;
   }
-
   .dash-body {
     padding: 10px 12px;
   }
-
   .dash-kpis {
     grid-template-columns: 1fr;
     gap: 6px;
   }
-
   .dash-kpi {
     padding: 8px 10px;
   }
-
   .dash-srch {
     max-width: 100%;
-  }
-
-  .stat-n {
-    font-size: clamp(20px, 3vw, 32px);
-  }
-
-  .stat-l {
-    font-size: clamp(8px, 1.2vw, 10px);
   }
 }
 
@@ -1139,29 +1087,24 @@ table.dtbl {
     padding: clamp(60px, 8vw, 100px) 12px 0;
     min-height: auto;
   }
-
   .hero-content {
     margin-bottom: clamp(20px, 3vw, 30px);
   }
-
   .hero-h1 {
     font-size: clamp(20px, 4vw, 36px);
     margin-bottom: 12px;
     line-height: 1.1;
   }
-
   .hero-sub {
     font-size: clamp(12px, 1.8vw, 14px);
     line-height: 1.5;
     margin: 0 auto 18px;
   }
-
   .hero-badge {
     padding: 4px 10px;
     margin-bottom: 14px;
     font-size: 9px;
   }
-
   .badge-dot {
     width: 5px;
     height: 5px;
@@ -1170,71 +1113,42 @@ table.dtbl {
   .hero-acts {
     gap: 8px;
   }
-
   .hero-acts a {
     font-size: 12px;
     padding: 10px 14px;
   }
-
   .hero-stats {
     gap: 16px;
     margin-top: 16px;
   }
-
   .hero-stat-n {
     font-size: 16px;
   }
-
   .hero-stat-l {
     font-size: 8px;
     letter-spacing: 0.8px;
   }
 
-  .hero-type-wrap {
-    min-width: 250px;
-    padding: 2px 8px;
-    gap: 8px;
-  }
-
-  .hero-type-icon {
-    width: 36px;
-    height: 36px;
-  }
-
-  .hero-type-icon i,
-  .hero-type-icon svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .hero-type-text {
-    font-size: 12px;
-  }
-
   .hero-dash-wrap {
     max-width: 100vw;
+    max-height: 50vh;
     border-radius: 0;
     margin: 0 -12px;
   }
-
   .dash {
     height: auto;
     font-size: 11px;
   }
-
   .dsb {
     padding: 8px 10px;
   }
-
   .dsb-logo {
     padding: 0 8px 10px;
   }
-
   .dsb-li {
     width: 24px;
     height: 24px;
   }
-
   .dsb-i {
     padding: 4px 6px;
     font-size: 10px;
@@ -1244,34 +1158,27 @@ table.dtbl {
   .dash-main {
     min-height: 300px;
   }
-
   .dash-body {
     padding: 8px 10px;
     gap: 8px;
   }
-
   .dash-ph h1 {
     font-size: 14px;
   }
-
   .dash-kpis {
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
   }
-
   .dash-kpi {
     padding: 6px 8px;
   }
-
   .dash-kl {
     font-size: 8px;
   }
-
   .dash-ki {
     width: 18px;
     height: 18px;
   }
-
   .dash-kv {
     font-size: 14px;
   }
@@ -1280,15 +1187,12 @@ table.dtbl {
     grid-template-columns: 1fr;
     gap: 6px;
   }
-
   .dcard {
     padding: 8px 10px;
   }
-
   .dct {
     font-size: 10px;
   }
-
   .dcv {
     font-size: 16px;
   }
@@ -1297,26 +1201,21 @@ table.dtbl {
     grid-template-columns: 1fr;
     gap: 6px;
   }
-
   .dsegs {
     grid-template-columns: repeat(3, 1fr);
     gap: 4px;
   }
-
   .dseg {
     padding: 6px 4px;
   }
-
   .dseg-ico {
     width: 16px;
     height: 16px;
     margin-bottom: 2px;
   }
-
   .dseg-v {
     font-size: 11px;
   }
-
   .dseg-l {
     font-size: 6.5px;
   }
@@ -1324,16 +1223,13 @@ table.dtbl {
   .stats-band {
     padding: clamp(20px, 3vw, 28px) 12px;
   }
-
   .stats-band-inner {
     grid-template-columns: 1fr;
     gap: 12px;
   }
-
   .stat-n {
     font-size: clamp(18px, 2.8vw, 24px);
   }
-
   .stat-l {
     font-size: 8px;
     letter-spacing: 1px;

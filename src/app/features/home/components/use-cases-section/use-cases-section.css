@@ -599,6 +599,7 @@
     position: relative;
     inset: auto;
     padding-left: 0;
+    padding-inline: 12px;
     opacity: 1;
     visibility: visible;
     transform: none;
@@ -679,6 +680,10 @@
 
   .uc-wrap {
     padding: 0 12px;
+  }
+
+  .uc-content {
+    padding-inline: 10px;
   }
 
   .uc-tabs {

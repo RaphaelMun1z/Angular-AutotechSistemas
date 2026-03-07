@@ -42,6 +42,14 @@
   min-width: 200px;
 }
 
+.autotech-logo {
+  height: 100%;
+  width: fit-content;
+  display: block;
+  object-fit: contain;
+  padding: 5px;
+}
+
 .nav-links {
   flex: 1;
   display: flex;
@@ -209,15 +217,36 @@
   }
 
   .nav-bar {
+    height: 56px;
+    max-width: none;
+  }
+
+  .nav-logo {
+    min-width: 132px;
+    padding: 0 14px 0 16px;
+    border-right: none;
+  }
+
+  .autotech-logo {
+    height: 24px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .nav-links,
+  .nav-soc,
+  .nav-cta {
     display: none;
+  }
+
+  .nav-right {
+    margin-left: auto;
+    border-left: none;
+    padding: 0 10px 0 0;
   }
 
   .nav-hbg {
     display: flex;
-    position: absolute;
-    right: 12px;
-    top: 12px;
-    z-index: 1001;
   }
 
   .nav-hbg span {
@@ -239,9 +268,13 @@
     padding: 10px 10px 0;
   }
 
-  .nav-hbg {
-    right: 10px;
-    top: 10px;
+  .nav-logo {
+    min-width: 120px;
+    padding: 0 12px 0 14px;
+  }
+
+  .autotech-logo {
+    height: 22px;
   }
 
   .nav-hbg span {

@@ -8,13 +8,12 @@ import { TestimonialsSection } from "./components/testimonials-section/testimoni
 import { PricingSection } from "./components/pricing-section/pricing-section";
 import { BlogSection } from "./components/blog-section/blog-section";
 import { ContactSection } from "./components/contact-section/contact-section";
+import { ContactLeadSection } from "./components/contact-lead-section/contact-lead-section";
 
 @Component({
   selector: 'app-home',
-  imports: [HeroSection, Features, UseCasesSection, BenefitsSection, IntegrationsSection, TestimonialsSection, PricingSection, BlogSection, ContactSection],
+  imports: [HeroSection, Features, UseCasesSection, BenefitsSection, IntegrationsSection, TestimonialsSection, PricingSection, BlogSection, ContactSection, ContactLeadSection],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home {
-
-}
+export class Home {}

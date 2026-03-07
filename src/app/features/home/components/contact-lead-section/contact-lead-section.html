@@ -1,0 +1,153 @@
+<section class="contact-lead" id="contact">
+  <div class="contact-lead-inner">
+    <div class="con-stepper-col">
+      <div class="con-stepper-lbl">Processo</div>
+      <div class="con-stepper">
+        <div class="con-line" [style.--progress-scale]="progressScale"></div>
+
+        <div class="con-step" [class.on]="currentStep >= 1">
+          <div class="con-step-ico">
+            <svg
+              width="17"
+              height="17"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </div>
+          <span class="con-step-txt">Identificacao</span>
+        </div>
+
+        <div class="con-step" [class.on]="currentStep >= 2">
+          <div class="con-step-ico">
+            <svg
+              width="17"
+              height="17"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="7" width="20" height="14" rx="2" />
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+            </svg>
+          </div>
+          <span class="con-step-txt">Seu Negocio</span>
+        </div>
+
+        <div class="con-step" [class.on]="currentStep >= 3">
+          <div class="con-step-ico">
+            <svg
+              width="17"
+              height="17"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+          </div>
+          <span class="con-step-txt">Necessidades</span>
+        </div>
+
+        <div class="con-step" [class.on]="currentStep >= 4">
+          <div class="con-step-ico">
+            <svg
+              width="17"
+              height="17"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </div>
+          <span class="con-step-txt">Pronto</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h3 class="rt">Agendar consultoria</h3>
+      <p id="contact-help" class="sr-only">Todos os campos sao obrigatorios para envio.</p>
+      <form [formGroup]="contactForm" aria-describedby="contact-help" (ngSubmit)="onSubmit()">
+        <div class="fg-row">
+          <div class="fg">
+            <label>Nome</label>
+            <input type="text" formControlName="nome" placeholder="Joao" autocomplete="given-name" required (input)="onTextOnlyInput('nome', $event)" />
+            <small class="fg-err" *ngIf="getFieldError('nome')">{{ getFieldError('nome') }}</small>
+          </div>
+          <div class="fg">
+            <label>Sobrenome</label>
+            <input
+              type="text"
+              formControlName="sobrenome"
+              placeholder="Silva"
+              autocomplete="family-name"
+              required
+              (input)="onTextOnlyInput('sobrenome', $event)"
+            />
+            <small class="fg-err" *ngIf="getFieldError('sobrenome')">{{ getFieldError('sobrenome') }}</small>
+          </div>
+        </div>
+        <div class="fg">
+          <label>E-mail Profissional</label>
+          <input type="email" formControlName="email" placeholder="joao@suaoficina.com.br" autocomplete="email" required />
+          <small class="fg-err" *ngIf="getFieldError('email')">{{ getFieldError('email') }}</small>
+        </div>
+        <div class="fg-row">
+          <div class="fg">
+            <label>Telefone / WhatsApp</label>
+            <input type="tel" formControlName="telefone" placeholder="(11) 99999-9999" autocomplete="tel-national" required (input)="onPhoneInput($event)" />
+            <small class="fg-err" *ngIf="getFieldError('telefone')">{{ getFieldError('telefone') }}</small>
+          </div>
+          <div class="fg">
+            <label>Cidade</label>
+            <input type="text" formControlName="cidade" placeholder="Sao Paulo, SP" autocomplete="address-level2" required (input)="onTextOnlyInput('cidade', $event)" />
+            <small class="fg-err" *ngIf="getFieldError('cidade')">{{ getFieldError('cidade') }}</small>
+          </div>
+        </div>
+        <div class="fg">
+          <label>Segmento da Empresa</label>
+          <select formControlName="segmento" required>
+            <option value="" disabled selected>Selecione seu segmento</option>
+            <option value="oficina">Oficina Mecanica</option>
+            <option value="concessionaria">Concessionaria</option>
+            <option value="autopecas">Loja de Autopecas</option>
+            <option value="estetica">Estetica Automotiva</option>
+            <option value="outro">Outro</option>
+          </select>
+          <small class="fg-err" *ngIf="getFieldError('segmento')">{{ getFieldError('segmento') }}</small>
+        </div>
+        <div class="fg">
+          <label>Mensagem</label>
+          <textarea
+            formControlName="mensagem"
+            rows="3"
+            maxlength="500"
+            required
+            placeholder="Conte um pouco sobre sua necessidade..."
+          ></textarea>
+          <small class="fg-err" *ngIf="getFieldError('mensagem')">{{ getFieldError('mensagem') }}</small>
+        </div>
+        <button type="submit" class="form-sub" [disabled]="!contactForm.valid">
+          <span>Agendar consultoria -></span>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

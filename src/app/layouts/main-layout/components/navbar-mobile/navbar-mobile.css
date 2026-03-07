@@ -3,13 +3,14 @@
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0);
-  z-index: 998;
+  z-index: 1200;
   pointer-events: none;
   transition: background 0.35s ease;
 }
 
-.mob-overlay.open {
+.mob-overlay.active {
   background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(2px);
   pointer-events: all;
 }
 
@@ -22,15 +23,16 @@
   height: 100vh;
   background: var(--c1);
   border-right: 1px solid var(--cb2);
-  z-index: 999;
+  z-index: 1201;
   display: flex;
   flex-direction: column;
   transform: translateX(-100%);
   transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1);
   overflow-y: auto;
+  box-shadow: 24px 0 60px rgba(0, 0, 0, 0.6);
 }
 
-.mob-menu.open {
+.mob-menu.active {
   transform: translateX(0);
 }
 
@@ -41,6 +43,13 @@
   justify-content: space-between;
   padding: 22px 20px 18px;
   border-bottom: 1px solid var(--cb2);
+}
+
+.mob-drawer-logo .autotech-logo {
+  height: 28px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .mob-close {
@@ -179,4 +188,19 @@
   fill: var(--red);
   letter-spacing: 4px;
   text-transform: uppercase;
+}
+
+/* ═══ RESPONSIVE ═══ */
+/* Esconder navbar-mobile em desktop (> 768px) */
+@media (min-width: 769px) {
+  app-navbar-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .mob-menu {
+    width: 100vw;
+    border-right: none;
+  }
 }

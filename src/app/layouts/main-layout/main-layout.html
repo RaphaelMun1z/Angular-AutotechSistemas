@@ -1,9 +1,11 @@
+<a class="skip-link" href="#main-content">Pular para o conteudo principal</a>
+
 <app-navbar-mobile [isMenuOpen]="isMobileMenuOpen" (closeMenu)="toggleMobileMenu()">
 </app-navbar-mobile>
 
-<app-navbar (menuToggled)="toggleMobileMenu()"> </app-navbar>
+<app-navbar [isMenuOpen]="isMobileMenuOpen" (menuToggled)="toggleMobileMenu()"> </app-navbar>
 
-<main>
+<main id="main-content" role="main" tabindex="-1">
   <router-outlet></router-outlet>
 </main>
 

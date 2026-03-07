@@ -1,51 +1,30 @@
-<div class="mob-overlay" id="mobOverlay" [class.active]="isMenuOpen" (click)="onClose()"></div>
-<nav class="mob-menu" id="mobMenu" [class.active]="isMenuOpen">
+<div class="mob-overlay" id="mobOverlay" [class.active]="isMenuOpen" aria-hidden="true" (click)="onClose()"></div>
+<nav class="mob-menu" id="mobMenu" [class.active]="isMenuOpen" aria-label="Menu mobile" [attr.aria-hidden]="!isMenuOpen">
   <div class="mob-drawer-head">
-    <a href="#hero" class="mob-drawer-logo" (click)="onClose()">
-      <svg height="28" viewBox="0 0 125 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="4" height="28" rx="2" fill="url(#paint0_linear_logo_mob)" />
-        <text class="autotech-logo-main-mob" x="12" y="13">AUTOTECH</text>
-        <text class="autotech-logo-sub-mob" x="12" y="22">SISTEMAS</text>
-        <defs>
-          <linearGradient
-            id="paint0_linear_logo_mob"
-            x1="2"
-            y1="0"
-            x2="2"
-            y2="28"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#1C69D4" />
-            <stop offset=".33" stop-color="#1C69D4" />
-            <stop offset=".33" stop-color="#F62500" />
-            <stop offset=".66" stop-color="#F62500" />
-            <stop offset=".66" stop-color="#FFCC00" />
-            <stop offset="1" stop-color="#FFCC00" />
-          </linearGradient>
-        </defs>
-      </svg>
+    <a href="#hero" class="mob-drawer-logo" aria-label="Ir para o inicio" (click)="onClose()">
+      <img src="/AutotechLogo.png" alt="Autotech Logo" class="autotech-logo" />
     </a>
-    <button class="mob-close" (click)="onClose()">✕</button>
+    <button type="button" class="mob-close" aria-label="Fechar menu mobile" (click)="onClose()">&times;</button>
   </div>
 
   <div class="mob-nav">
-    <a href="#hero" (click)="onClose()">Início <span class="mob-nav-arrow">→</span></a>
-    <a href="#features" (click)="onClose()">Recursos <span class="mob-nav-arrow">→</span></a>
-    <a href="#usecases" (click)="onClose()">Casos de Uso <span class="mob-nav-arrow">→</span></a>
-    <a href="#benefits" (click)="onClose()">Benefícios <span class="mob-nav-arrow">→</span></a>
+    <a href="#hero" (click)="onClose()">In&iacute;cio <span class="mob-nav-arrow">&rarr;</span></a>
+    <a href="#features" (click)="onClose()">Recursos <span class="mob-nav-arrow">&rarr;</span></a>
+    <a href="#usecases" (click)="onClose()">Casos de Uso <span class="mob-nav-arrow">&rarr;</span></a>
+    <a href="#benefits" (click)="onClose()">Benef&iacute;cios <span class="mob-nav-arrow">&rarr;</span></a>
     <div class="mob-nav-divider"></div>
-    <a href="#integrations" (click)="onClose()">Integrações <span class="mob-nav-arrow">→</span></a>
-    <a href="#pricing" (click)="onClose()">Planos <span class="mob-nav-arrow">→</span></a>
-    <a href="#blog" (click)="onClose()">Blog <span class="mob-nav-arrow">→</span></a>
+    <a href="#integrations" (click)="onClose()">Integra&ccedil;&otilde;es <span class="mob-nav-arrow">&rarr;</span></a>
+    <a href="#pricing" (click)="onClose()">Planos <span class="mob-nav-arrow">&rarr;</span></a>
+    <a href="#blog" (click)="onClose()">Blog <span class="mob-nav-arrow">&rarr;</span></a>
     <div class="mob-nav-divider"></div>
-    <a href="#contact" (click)="onClose()">Contato <span class="mob-nav-arrow">→</span></a>
+    <a href="#contact" (click)="onClose()">Contato <span class="mob-nav-arrow">&rarr;</span></a>
   </div>
 
   <div class="mob-drawer-foot">
-    <button class="mob-cta" (click)="handleContactClick()">Começar Grátis — 14 dias</button>
+    <button type="button" class="mob-cta" aria-label="Falar com especialista" (click)="handleContactClick()">Falar com Especialista</button>
 
     <div class="mob-social-row">
-      <a href="#" class="mob-soc">
+      <a href="#" class="mob-soc" aria-label="Instagram da Autotech" title="Instagram da Autotech" (click)="$event.preventDefault()">
         <svg
           viewBox="0 0 24 24"
           fill="none"
@@ -59,7 +38,7 @@
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
         </svg>
       </a>
-      <a href="#" class="mob-soc">
+      <a href="#" class="mob-soc" aria-label="LinkedIn da Autotech" title="LinkedIn da Autotech" (click)="$event.preventDefault()">
         <svg
           viewBox="0 0 24 24"
           fill="none"
@@ -73,7 +52,7 @@
           <circle cx="4" cy="4" r="2" />
         </svg>
       </a>
-      <a href="#" class="mob-soc">
+      <a href="#" class="mob-soc" aria-label="YouTube da Autotech" title="YouTube da Autotech" (click)="$event.preventDefault()">
         <svg
           viewBox="0 0 24 24"
           fill="none"

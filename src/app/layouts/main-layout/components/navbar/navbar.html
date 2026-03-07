@@ -1,7 +1,7 @@
 <div class="nav-wrap">
-  <nav class="nav-bar" id="navbar">
-    <a href="#hero" class="nav-logo">
-      <img src="AutotechLogo.png" alt="Autotech Logo" class="autotech-logo"/>
+  <nav class="nav-bar" id="navbar" aria-label="Navegacao principal">
+    <a href="#hero" class="nav-logo" aria-label="Ir para o inicio">
+      <img src="/AutotechLogo.png" alt="Autotech Logo" class="autotech-logo"/>
     </a>
 
     <div class="nav-links">
@@ -18,7 +18,7 @@
     </div>
 
     <div class="nav-right">
-      <a href="#" class="nav-soc">
+      <a href="#" class="nav-soc" aria-label="Instagram da Autotech" title="Instagram da Autotech" (click)="$event.preventDefault()">
         <svg
           viewBox="0 0 24 24"
           fill="none"
@@ -32,7 +32,7 @@
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
         </svg>
       </a>
-      <a href="#" class="nav-soc">
+      <a href="#" class="nav-soc" aria-label="LinkedIn da Autotech" title="LinkedIn da Autotech" (click)="$event.preventDefault()">
         <svg
           viewBox="0 0 24 24"
           fill="none"
@@ -46,9 +46,18 @@
           <circle cx="4" cy="4" r="2" />
         </svg>
       </a>
-      <button class="nav-cta" (click)="scrollToContact()">Falar com Especialista</button>
+      <button type="button" class="nav-cta" aria-label="Falar com especialista" (click)="scrollToContact()">Falar com Especialista</button>
 
-      <button class="nav-hbg" id="hambtn" (click)="onToggleMenu()">
+      <button
+        type="button"
+        class="nav-hbg"
+        id="hambtn"
+        [class.is-open]="isMenuOpen"
+        aria-controls="mobMenu"
+        [attr.aria-expanded]="isMenuOpen"
+        aria-label="Abrir ou fechar menu mobile"
+        (click)="onToggleMenu()"
+      >
         <span></span><span></span><span></span>
       </button>
     </div>

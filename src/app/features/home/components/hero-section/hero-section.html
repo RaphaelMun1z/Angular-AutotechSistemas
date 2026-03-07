@@ -2,24 +2,101 @@
   <div class="hero-content">
     <h1 class="hero-h1 rt" data-aos="fade-up">
       Software sob medida<br />para a sua<br />
-      <span
-        class="hero-type-wrap"
-        [ngClass]="animationClass"
-        [ngStyle]="{
-          background: currentType.colors.bg,
-          borderColor: currentType.colors.text,
-          color: currentType.colors.text,
-        }"
-      >
-        <span class="hero-type-icon" [ngStyle]="{ background: currentType.colors.text }">
-          <ng-container [ngSwitch]="currentType.icon">
-            <i *ngSwitchCase="'wrench'" data-feather="tool"></i>
-            <i *ngSwitchCase="'car'" data-feather="truck"></i>
-            <i *ngSwitchCase="'hammer'" data-feather="hammer"></i>
-            <i *ngSwitchCase="'oil'" data-feather="droplet"></i>
-          </ng-container>
-        </span>
-        <span class="hero-type-text hl-y">{{ currentType.text }}</span>
+      <span class="hero-type-wrap">
+        <div class="hero-type-slider">
+          <span class="hero-type-item theme-mechanic">
+            <span class="hero-type-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                ></path>
+              </svg>
+            </span>
+            <span class="hero-type-text">oficina mecânica</span>
+          </span>
+
+          <span class="hero-type-item theme-center">
+            <span class="hero-type-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </span>
+            <span class="hero-type-text">auto center</span>
+          </span>
+
+          <span class="hero-type-item theme-paint">
+            <span class="hero-type-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M15 12l-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"
+                ></path>
+                <path d="M17.64 15L22 10.64"></path>
+                <path
+                  d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"
+                ></path>
+              </svg>
+            </span>
+            <span class="hero-type-text">funilaria</span>
+          </span>
+
+          <span class="hero-type-item theme-oil">
+            <span class="hero-type-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+            </span>
+            <span class="hero-type-text">troca de óleo</span>
+          </span>
+
+          <span class="hero-type-item theme-mechanic">
+            <span class="hero-type-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                ></path>
+              </svg>
+            </span>
+            <span class="hero-type-text">oficina mecânica</span>
+          </span>
+        </div>
       </span>
     </h1>
     <p class="hero-sub" data-aos="fade-up">
@@ -28,7 +105,7 @@
     </p>
     <div class="hero-acts" data-aos="fade-up">
       <a (click)="scrollToSection('contact')" class="btn-r" style="cursor: pointer"
-        ><span>Começar Grátis — 14 dias</span></a
+        ><span>Agendar Consultoria</span></a
       >
       <a (click)="scrollToSection('features')" class="btn-o" style="cursor: pointer"
         ><span>Ver Demonstração →</span></a
