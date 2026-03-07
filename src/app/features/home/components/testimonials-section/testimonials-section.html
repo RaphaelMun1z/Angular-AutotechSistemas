@@ -1,0 +1,109 @@
+<section class="testimonials" id="testimonials">
+  <div class="testi-wrap">
+    <div class="sec-hdr">
+      <div class="eyebrow lt"><span>Depoimentos</span></div>
+      <h2 class="sec-title rt dk">
+        O que nossos clientes<br />dizem sobre a
+        <span class="hl-r">Autotech</span>
+      </h2>
+      <p class="sec-sub dk" style="margin: 14px auto 0">
+        Líderes do setor automotivo compartilham como transformaram a gestão com nosso sistema.
+      </p>
+    </div>
+
+    <div
+      class="testi-avatars tavi-row"
+      style="
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 36px;
+        flex-wrap: wrap;
+      "
+    >
+      @for (av of avatars; track av; let i = $index) {
+        <img
+          [src]="av"
+          class="tav"
+          [class.on]="
+            (i === 1 && activeIndex === 0) ||
+            (i === 3 && activeIndex === 1) ||
+            (i === 5 && activeIndex === 2)
+          "
+          (click)="setTesti(i)"
+          alt="Avatar do cliente"
+        />
+      }
+    </div>
+
+    <div class="testi-cars" id="testiCars">
+      @for (t of testimonials; track t.name; let idx = $index) {
+        <div class="tcard" [class.on]="activeIndex === idx" data-aos="fade-up">
+          <div class="tcard-seg">
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              stroke="currentColor"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="width: 0.8em; height: 0.8em; color: var(--red)"
+            >
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+              ></polygon>
+            </svg>
+            {{ t.segment }}
+          </div>
+          <div class="tcard-user">
+            <img [src]="t.avatarUrl" [alt]="t.name" />
+            <h4>{{ t.name }}</h4>
+            <p>{{ t.role }}</p>
+          </div>
+          <div class="tcard-stars">
+            ★★★★★ <span>{{ t.rating }}</span>
+          </div>
+          <p class="tcard-q">{{ t.quote }}</p>
+          <div class="tcard-tags">
+            @for (tag of t.tags; track tag) {
+              <span>{{ tag }}</span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="testi-ctrls">
+      <button class="tbtn" (click)="prevTesti()">
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="19" y1="12" x2="5" y2="12" />
+          <polyline points="12 19 5 12 12 5" />
+        </svg>
+      </button>
+      <button class="tbtn" (click)="nextTesti()">
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="5" y1="12" x2="19" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>

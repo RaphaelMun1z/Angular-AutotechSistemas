@@ -1,0 +1,56 @@
+<div class="nav-wrap">
+  <nav class="nav-bar" id="navbar">
+    <a href="#hero" class="nav-logo">
+      <img src="AutotechLogo.png" alt="Autotech Logo" class="autotech-logo"/>
+    </a>
+
+    <div class="nav-links">
+      <ul>
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#features">Recursos</a></li>
+        <li><a href="#usecases">Casos de Uso</a></li>
+        <li><a href="#benefits">Benefícios</a></li>
+        <li><a href="#integrations">Integrações</a></li>
+        <li><a href="#pricing">Planos</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-right">
+      <a href="#" class="nav-soc">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="2" y="2" width="20" height="20" rx="5" />
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+        </svg>
+      </a>
+      <a href="#" class="nav-soc">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
+          <rect x="2" y="9" width="4" height="12" />
+          <circle cx="4" cy="4" r="2" />
+        </svg>
+      </a>
+      <button class="nav-cta" (click)="scrollToContact()">Falar com Especialista</button>
+
+      <button class="nav-hbg" id="hambtn" (click)="onToggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</div>

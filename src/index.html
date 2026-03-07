@@ -1,13 +1,206 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>AngularAutotechSistemas</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+<html lang="pt-BR" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ═══ SEO PRIMARY ═══ -->
+    <title>Autotech Sistemas | Gestão Automotiva</title>
+    <meta
+      name="description"
+      content="Sistema de gestão automotiva completo: OS digital, estoque, aprovação via WhatsApp e NF-e integrada. Landing pages profissionais para oficinas, concessionárias e autopeças. A partir de R$999,90. Solicite uma demonstração gratuita."
+    />
+    <meta
+      name="keywords"
+      content="sistema gestão oficina mecânica, software automotivo, OS digital, ordem de serviço online, sistema concessionária, gestão autopeças, site para oficina, landing page automotiva, aprovação whatsapp oficina, NF-e oficina, controle estoque peças, sistema estética automotiva"
+    />
+    <meta name="author" content="Autotech Sistemas" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <link rel="canonical" href="https://autotechsistemas.com.br/" />
+    <link rel="icon" href="Favicon-v2.ico" type="image/x-icon" />
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- AOS scroll animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- ═══ OG / SOCIAL ═══ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://autotechsistemas.com.br/" />
+    <meta
+      property="og:title"
+      content="Autotech Sistemas | Sistema de Gestão Automotiva + Sites para Oficinas"
+    />
+    <meta
+      property="og:description"
+      content="Sistema de gestão para oficinas mecânicas, concessionárias e lojas de autopeças. OS digital, estoque inteligente, aprovação via WhatsApp. Sites e landing pages profissionais a partir de R$999,90."
+    />
+    <meta property="og:image" content="https://autotechsistemas.com.br/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Autotech Sistemas" />
+
+    <!-- ═══ TWITTER CARD ═══ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Autotech Sistemas | Sistema de Gestão Automotiva" />
+    <meta
+      name="twitter:description"
+      content="Sistema para oficinas: OS digital, estoque, WhatsApp e NF-e. Sites profissionais a partir de R$999,90."
+    />
+    <meta name="twitter:image" content="https://autotechsistemas.com.br/og-image.jpg" />
+
+    <!-- ═══ GEO / LOCAL SEO ═══ -->
+    <meta name="geo.region" content="BR" />
+    <meta name="geo.placename" content="Brasil" />
+
+    <!-- ═══ SCHEMA.ORG STRUCTURED DATA ═══ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://autotechsistemas.com.br/#organization",
+            "name": "Autotech Sistemas",
+            "url": "https://autotechsistemas.com.br/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://autotechsistemas.com.br/logo.png"
+            },
+            "description": "Desenvolvimento de sistemas de gestão automotiva e sites profissionais para oficinas mecânicas, concessionárias, lojas de autopeças e estéticas automotivas.",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": "Portuguese"
+            },
+            "areaServed": "BR",
+            "sameAs": []
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://autotechsistemas.com.br/#website",
+            "url": "https://autotechsistemas.com.br/",
+            "name": "Autotech Sistemas",
+            "publisher": {
+              "@id": "https://autotechsistemas.com.br/#organization"
+            },
+            "inLanguage": "pt-BR"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://autotechsistemas.com.br/#webpage",
+            "url": "https://autotechsistemas.com.br/",
+            "name": "Autotech Sistemas | Sistema de Gestão Automotiva + Sites para Oficinas",
+            "isPartOf": {
+              "@id": "https://autotechsistemas.com.br/#website"
+            },
+            "about": {
+              "@id": "https://autotechsistemas.com.br/#organization"
+            },
+            "description": "Sistema de gestão para oficinas mecânicas, concessionárias e autopeças. Sites e landing pages profissionais a partir de R$999,90.",
+            "inLanguage": "pt-BR"
+          },
+          {
+            "@type": "ItemList",
+            "name": "Serviços Autotech Sistemas",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "Product",
+                  "name": "Site Landing Page Automotiva",
+                  "description": "Landing page profissional para oficinas mecânicas, concessionárias e autopeças com design de alta conversão.",
+                  "offers": {
+                    "@type": "Offer",
+                    "price": "999.90",
+                    "priceCurrency": "BRL",
+                    "availability": "https://schema.org/InStock",
+                    "priceValidUntil": "2026-12-31"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "Product",
+                  "name": "Sistema de Gestão Automotiva",
+                  "description": "Sistema completo de gestão para oficinas: OS digital, estoque, aprovação WhatsApp, NF-e integrada.",
+                  "offers": {
+                    "@type": "Offer",
+                    "price": "1499.90",
+                    "priceCurrency": "BRL",
+                    "availability": "https://schema.org/InStock",
+                    "priceValidUntil": "2026-12-31"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "Product",
+                  "name": "Combo Completo: Site + Sistema + Linktree",
+                  "description": "Landing page + Sistema de gestão + Página de links estilo Linktree para máximo alcance digital.",
+                  "offers": {
+                    "@type": "Offer",
+                    "price": "2000.00",
+                    "priceCurrency": "BRL",
+                    "availability": "https://schema.org/InStock",
+                    "priceValidUntil": "2026-12-31"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Quanto custa um site para oficina mecânica?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Uma landing page profissional para oficina mecânica começa a partir de R$999,90 na Autotech Sistemas, com design personalizado e otimização para conversão."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "O sistema de gestão funciona para concessionárias e autopeças?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sim! O sistema Autotech foi desenvolvido para oficinas mecânicas, concessionárias, lojas de autopeças e estéticas automotivas, com módulos específicos para cada tipo de negócio."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Quais formas de pagamento são aceitas?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Aceitamos pagamento via cartão de crédito, débito e Pix para todos os planos e serviços."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <!-- ═══ PERFORMANCE ═══ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
 </html>

@@ -1,0 +1,142 @@
+/* ═══ FOOTER ═══ */
+.footer {
+  background: var(--c0);
+  border-top: 1px solid var(--cb2);
+  padding: clamp(50px, 7vw, 80px) 20px clamp(24px, 3vw, 36px);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: clamp(40px, 5vw, 56px);
+}
+
+.footer-brand a.footer-logo-wrap {
+  border-right: none;
+  background: transparent;
+  padding: 0;
+  margin-bottom: 14px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 8px;
+}
+
+.fsoc {
+  width: 34px;
+  height: 34px;
+  border-radius: 5px;
+  background: var(--c2);
+  border: 1px solid var(--cb2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.4);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.fsoc:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
+
+.fsoc svg {
+  width: 14px;
+  height: 14px;
+}
+
+.fcol h5 {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 14px;
+}
+
+.fcol ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fcol a {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.32);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.fcol a:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-bot {
+  border-top: 1px solid var(--cb);
+  padding-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-copy {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.22);
+  font-weight: 500;
+}
+
+.footer-badges {
+  display: flex;
+  gap: 7px;
+}
+
+.fbadge {
+  background: var(--c2);
+  border: 1px solid var(--cb2);
+  padding: 4px 11px;
+  border-radius: 3px;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.28);
+  transform: skewX(-7deg);
+}
+
+.fbadge span {
+  display: inline-block;
+  transform: skewX(7deg);
+}
+
+.autotech-logo-main-foot {
+  font:
+    900 italic 16px 'Atyp',
+    sans-serif;
+  fill: #fff;
+  letter-spacing: 3px;
+}
+
+.autotech-logo-sub-foot {
+  font:
+    800 7px 'Atyp',
+    sans-serif;
+  fill: var(--red);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.footer-desc {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 18px;
+}

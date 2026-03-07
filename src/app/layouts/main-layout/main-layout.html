@@ -1,0 +1,10 @@
+<app-navbar-mobile [isMenuOpen]="isMobileMenuOpen" (closeMenu)="toggleMobileMenu()">
+</app-navbar-mobile>
+
+<app-navbar (menuToggled)="toggleMobileMenu()"> </app-navbar>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<app-footer></app-footer>

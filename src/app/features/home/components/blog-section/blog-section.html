@@ -1,0 +1,62 @@
+<section class="blog" id="blog">
+  <div class="sec-hdr">
+    <div class="eyebrow"><span>Blog</span></div>
+    <h2 class="sec-title rt">
+      Novidades e <span class="hl-r">dicas</span><br />do setor automotivo
+    </h2>
+    <p class="sec-sub">
+      Artigos, tutoriais e tendências do mercado para manter sua oficina sempre à frente.
+    </p>
+  </div>
+
+  <div class="blog-grid">
+    @for (article of articles; track article.title) {
+      <div class="blog-card" data-aos="fade-up">
+        <div class="blog-thumb" [style.background]="article.thumbGradient">
+          <div class="blog-thumb-inner">
+            <svg
+              width="64"
+              height="64"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="rgba(255,255,255,0.2)"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              [innerHTML]="article.svgPath"
+            ></svg>
+          </div>
+          <div class="blog-cat">{{ article.category }}</div>
+        </div>
+
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span>{{ article.date }}</span>
+            <div class="blog-meta-dot"></div>
+            <span>{{ article.readTime }}</span>
+          </div>
+          <div class="blog-title">{{ article.title }}</div>
+          <p class="blog-excerpt">{{ article.excerpt }}</p>
+          <div class="blog-link">
+            <span>Ler artigo</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="blog-cta">
+    <a href="#" class="btn-o"><span>Ver todos os artigos →</span></a>
+  </div>
+</section>
