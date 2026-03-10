@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, OnInit, AfterViewInit } from '@angular/core';
+import { AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { CounterService } from '../../../../core/services/counter.service';
 
 declare var feather: any;
@@ -9,6 +9,7 @@ declare var feather: any;
   imports: [CommonModule],
   templateUrl: './hero-section.html',
   styleUrl: './hero-section.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HeroSection implements OnInit, AfterViewInit {
   officinasCount = 0;
