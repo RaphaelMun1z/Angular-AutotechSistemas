@@ -2086,9 +2086,11 @@ table.dtbl {
     max-width: 98vw;
     height: 500px; /* ~96% de 520px */
     transform: perspective(900px) rotateX(9deg) rotateZ(-4deg);
+	border-radius: 20px 20px 0 0 !important;
   }
   .dashboard-root {
     height: 520px;
+	border-radius: 20px 20px 0 0;
   }
   .dashboard-root .sidebar {
     width: 200px;
@@ -2163,7 +2165,8 @@ table.dtbl {
     min-height: auto;
   }
   .hero-content {
-    margin-bottom: clamp(20px, 3vw, 30px);
+    margin-bottom: clamp(50px, 3vw, 30px);
+	margin-top: 5vh;
   }
   .hero-h1 {
     font-size: clamp(20px, 4vw, 36px);
@@ -2378,7 +2381,7 @@ table.dtbl {
     padding: clamp(20px, 3vw, 28px) 12px;
   }
   .stats-band-inner {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
     gap: 12px;
   }
   .stat-n {
