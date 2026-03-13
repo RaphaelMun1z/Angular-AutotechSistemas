@@ -857,7 +857,8 @@
 }
 
 .ae-btn-outline {
-  background-image: linear-gradient(#111111, #111111), linear-gradient(90deg, #9333ea 0%, #d946ef 100%);
+  background-image:
+    linear-gradient(#111111, #111111), linear-gradient(90deg, #9333ea 0%, #d946ef 100%);
   background-origin: border-box;
   background-clip: padding-box, border-box;
   border: 2px solid transparent;
@@ -921,6 +922,11 @@
   max-height: 116px;
   object-fit: contain;
   filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.65));
+}
+
+img {
+  height: 100%;
+  object-fit: contain;
 }
 
 .ae-car-display model-viewer {
@@ -2086,11 +2092,11 @@ table.dtbl {
     max-width: 98vw;
     height: 500px; /* ~96% de 520px */
     transform: perspective(900px) rotateX(9deg) rotateZ(-4deg);
-	border-radius: 20px 20px 0 0 !important;
+    border-radius: 20px 20px 0 0 !important;
   }
   .dashboard-root {
     height: 520px;
-	border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0;
   }
   .dashboard-root .sidebar {
     width: 200px;
@@ -2166,7 +2172,7 @@ table.dtbl {
   }
   .hero-content {
     margin-bottom: clamp(50px, 3vw, 30px);
-	margin-top: 5vh;
+    margin-top: 5vh;
   }
   .hero-h1 {
     font-size: clamp(20px, 4vw, 36px);

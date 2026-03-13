@@ -13,6 +13,14 @@
   margin: 40px auto 0;
 }
 
+.uc-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* padding: 0 clamp(20px, 4vw, 30px); */
+  margin-left: 110px;
+  margin-right: 0px;
+}
+
 .blog-card {
   background: var(--c2);
   border: 1px solid var(--cb);

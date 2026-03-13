@@ -244,6 +244,14 @@
   transition: color 0.2s;
 }
 
+.uc-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* padding: 0 clamp(20px, 4vw, 30px); */
+  margin-left: 110px;
+  margin-right: 0px;
+}
+
 .pricing-note a:hover {
   color: var(--yellow);
 }

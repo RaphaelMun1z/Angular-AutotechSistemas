@@ -6,8 +6,16 @@
 }
 
 .testi-wrap {
-  max-width: 1100px;
+  max-width: 1280px;
   margin: 0 auto;
+}
+
+.uc-wrap {
+  max-width: 1200px;
+  /* margin: 0 auto; */
+  /* padding: 0 clamp(20px, 4vw, 30px); */
+  margin-left: 0;
+  margin-right: 0px;
 }
 
 .testi-avatars {

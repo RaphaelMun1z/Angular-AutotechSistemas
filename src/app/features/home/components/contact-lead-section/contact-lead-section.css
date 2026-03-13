@@ -1,5 +1,5 @@
 .contact-lead {
-  background: var(--c2);
+  background: var(--lt);
   padding: 24px 20px clamp(80px, 12vw, 140px);
 }
 
@@ -96,19 +96,19 @@
   font-weight: 700;
   text-transform: uppercase;
   font-style: italic;
-  color: rgba(255, 255, 255, 0.28);
+  color: #111;
   white-space: nowrap;
 }
 
 .con-step.on .con-step-ico {
   border-color: var(--red);
-  color: var(--red);
+  color: #111;
   box-shadow: 0 0 14px rgba(220, 20, 60, 0.25);
   background: rgba(220, 20, 60, 0.08);
 }
 
 .con-step.on .con-step-txt {
-  color: #fff;
+  color: #111;
 }
 
 .contact-form {

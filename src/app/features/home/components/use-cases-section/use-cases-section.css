@@ -10,7 +10,9 @@
 .uc-wrap {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 clamp(20px, 4vw, 60px);
+  /* padding: 0 clamp(20px, 4vw, 30px); */
+  margin-left: 130px;
+  margin-right: 0px;
 }
 
 /* Header and tabs inside wrap */
@@ -91,7 +93,7 @@
 .uc-content {
   position: absolute;
   inset: 0;
-  padding-left: clamp(20px, 4vw, 60px);
+  padding-left: clamp(8.5vw, 4vw, 60px);
   display: flex;
   flex-direction: column;
   justify-content: center;
