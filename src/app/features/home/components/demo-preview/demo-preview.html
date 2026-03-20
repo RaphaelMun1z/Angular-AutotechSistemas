@@ -1,0 +1,722 @@
+<div class="uc-screen-col">
+  <div class="uc-ipad">
+    <div class="uc-ipad-top">
+      <div class="uc-ipad-status"><span>9:41</span></div>
+      <div class="uc-ipad-cam"></div>
+      <div class="uc-ipad-status"><span>▮▮▯ WiFi</span></div>
+    </div>
+    <div class="uc-app">
+      <div class="uc-app-sidebar">
+        <div class="uc-app-logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="uc-app-sico" [class.on]="activeTab==='oficina'">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <div class="uc-app-sico" [class.on]="activeTab==='concessionaria'">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+        </div>
+        <div class="uc-app-sico" [class.on]="activeTab==='autopecas'">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <div class="uc-app-sico" [class.on]="activeTab==='estetica'">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+      </div>
+
+      <div class="uc-app-main">
+        <div class="uc-screen-panels">
+
+          <!-- ══ OFICINA ══ -->
+          <div class="uc-screen-panel" [class.active]="activeTab==='oficina'">
+            <div class="dp-screen">
+              <div class="dp-topbar">
+                <div class="dp-search">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  <span id="searchOficina">Buscar OS, placa, mecânico...</span>
+                </div>
+                <div class="dp-topbar-right">
+                  <div class="dp-icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                    <span class="dot"></span>
+                  </div>
+                  <div class="dp-avatar-sm">CM</div>
+                </div>
+              </div>
+
+              <div class="dp-page-hdr">
+                <div class="dp-page-hdr-left">
+                  <div class="dp-back">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11"><polyline points="15 18 9 12 15 6"/></svg>
+                  </div>
+                  <div>
+                    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+                      <span class="dp-order-num">Dashboard · Hoje</span>
+                      <span class="dp-badge b-green badge-pulse">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="7" height="7"><circle cx="12" cy="12" r="10"/></svg>
+                        Ao vivo
+                      </span>
+                      <span class="dp-badge b-orange">Sexta, 6 de março</span>
+                    </div>
+                    <div class="dp-page-meta">Oficina Central · <b>Carlos Mendes — Administrador</b></div>
+                  </div>
+                </div>
+                <div class="dp-page-hdr-right">
+                  <div class="dp-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Relatório
+                  </div>
+                  <div class="dp-btn dp-btn-pri">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Nova OS
+                  </div>
+                </div>
+              </div>
+
+              <div class="dp-body">
+                <div class="dp-main">
+                  <div class="dp-kpis">
+                    <div class="dp-kpi kpi-accent">
+                      <div class="dp-kpi-val" id="kpiOs">0</div>
+                      <div class="dp-kpi-lbl">Em andamento</div>
+                      <div class="dp-kpi-delta up">↑ +3 hoje</div>
+                    </div>
+                    <div class="dp-kpi kpi-green">
+                      <div class="dp-kpi-val" id="kpiDone">0</div>
+                      <div class="dp-kpi-lbl">Concluídas</div>
+                      <div class="dp-kpi-delta up">↑ recorde</div>
+                    </div>
+                    <div class="dp-kpi kpi-red">
+                      <div class="dp-kpi-val" id="kpiLate">0</div>
+                      <div class="dp-kpi-lbl">Atrasadas</div>
+                      <div class="dp-kpi-delta dn">⚠ atenção</div>
+                    </div>
+                    <div class="dp-kpi kpi-blue">
+                      <div class="dp-kpi-val" id="kpiFat">R$ 0</div>
+                      <div class="dp-kpi-lbl">Faturamento</div>
+                      <div class="dp-kpi-delta up">↑ +18%</div>
+                    </div>
+                  </div>
+
+                  <div class="dp-card">
+                    <div class="dp-card-hdr">
+                      <span class="dp-card-title">Ordens de Serviço</span>
+                      <span class="dp-badge b-orange">12 abertas</span>
+                    </div>
+                    <table class="dp-table">
+                      <thead>
+                        <tr>
+                          <th>Placa / Veículo</th>
+                          <th>Serviço</th>
+                          <th>Mecânico</th>
+                          <th>Status</th>
+                          <th>Tempo</th>
+                          <th>Box</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="anim-row" style="animation-delay:.05s">
+                          <td><div class="dp-plate">ABC-1234</div><div class="dp-plate-sub">Toyota Corolla · 2022</div></td>
+                          <td>Revisão 60.000 km</td>
+                          <td>Carlos M.</td>
+                          <td><span class="dp-badge b-blue">Em andamento</span></td>
+                          <td><span class="dp-timer-cell" id="timer1">2:14:03</span></td>
+                          <td><span class="dp-badge b-gray">Box 1</span></td>
+                        </tr>
+                        <tr class="anim-row" style="animation-delay:.1s">
+                          <td><div class="dp-plate">XYZ-5678</div><div class="dp-plate-sub">Honda Civic · 2023</div></td>
+                          <td>Troca de freios diant.</td>
+                          <td>Rafael L.</td>
+                          <td><span class="dp-badge b-orange">Aguard. peça</span></td>
+                          <td><span class="dp-timer-cell">0:45:12</span></td>
+                          <td><span class="dp-badge b-gray">Box 2</span></td>
+                        </tr>
+                        <tr class="anim-row" style="animation-delay:.15s">
+                          <td><div class="dp-plate">DEF-9012</div><div class="dp-plate-sub">VW Gol · 2020</div></td>
+                          <td>Alinhamento + Balan.</td>
+                          <td>André C.</td>
+                          <td><span class="dp-badge b-green">Concluída</span></td>
+                          <td><span class="dp-timer-cell">1:02:44</span></td>
+                          <td><span class="dp-badge b-gray">Box 3</span></td>
+                        </tr>
+                        <tr class="anim-row tr-late" style="animation-delay:.2s">
+                          <td><div class="dp-plate" style="color:#ef4444">GHI-3456</div><div class="dp-plate-sub">Fiat Argo · 2021</div></td>
+                          <td>Diagnóstico elétrico</td>
+                          <td>Carlos M.</td>
+                          <td><span class="dp-badge b-red">Atrasada ⚠</span></td>
+                          <td><span class="dp-timer-cell late-blink" id="timer2">3:51:20</span></td>
+                          <td><span class="dp-badge b-gray">Box 4</span></td>
+                        </tr>
+                        <tr class="anim-row tr-new" id="newOsRow" style="display:none">
+                          <td><div class="dp-plate" style="color:#2563eb">JKL-7890</div><div class="dp-plate-sub">Chevrolet Onix · 2023</div></td>
+                          <td>Troca de óleo</td>
+                          <td>Rafael L.</td>
+                          <td><span class="dp-badge b-blue">Nova OS</span></td>
+                          <td><span class="dp-timer-cell" id="timer3">0:00:01</span></td>
+                          <td><span class="dp-badge b-gray">Box 2</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="dp-chart-pair">
+                    <div class="dp-card" style="margin-bottom:0">
+                      <div class="dp-card-hdr"><span class="dp-card-title">Faturamento semanal</span></div>
+                      <div style="padding:12px 14px">
+                        <div class="dp-bar-chart">
+                          <div class="dp-bar-col"><div class="dp-bar-el fill" data-h="45"></div><span class="lbl">Seg</span></div>
+                          <div class="dp-bar-col"><div class="dp-bar-el fill" data-h="62"></div><span class="lbl">Ter</span></div>
+                          <div class="dp-bar-col"><div class="dp-bar-el fill" data-h="38"></div><span class="lbl">Qua</span></div>
+                          <div class="dp-bar-col"><div class="dp-bar-el fill" data-h="78"></div><span class="lbl">Qui</span></div>
+                          <div class="dp-bar-col"><div class="dp-bar-el today" data-h="90"></div><span class="lbl today">Hoje</span></div>
+                          <div class="dp-bar-col"><div class="dp-bar-el dim"></div><span class="lbl">Sáb</span></div>
+                          <div class="dp-bar-col"><div class="dp-bar-el dim"></div><span class="lbl">Dom</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dp-card" style="margin-bottom:0">
+                      <div class="dp-card-hdr"><span class="dp-card-title">Carga por mecânico</span></div>
+                      <div class="dp-mec-list">
+                        <div class="dp-mec-item">
+                          <div class="dp-mec-header">Carlos M. <span class="dp-mec-count">3 OS</span></div>
+                          <div class="dp-mec-track"><div class="dp-mec-bar" style="--w:85%;background:#e8540a"></div></div>
+                        </div>
+                        <div class="dp-mec-item">
+                          <div class="dp-mec-header">Rafael L. <span class="dp-mec-count">2 OS</span></div>
+                          <div class="dp-mec-track"><div class="dp-mec-bar" style="--w:60%;background:#3b82f6"></div></div>
+                        </div>
+                        <div class="dp-mec-item">
+                          <div class="dp-mec-header">André C. <span class="dp-mec-count">2 OS</span></div>
+                          <div class="dp-mec-track"><div class="dp-mec-bar" style="--w:40%;background:#f59e0b"></div></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dp-aside">
+                  <div class="dp-aside-section">
+                    <div class="dp-aside-title">Resumo</div>
+                    <div class="dp-aside-row"><span>OS abertas</span><span class="dp-aside-val">12</span></div>
+                    <div class="dp-aside-row"><span>Concluídas</span><span class="dp-aside-val" style="color:#10b981">8</span></div>
+                    <div class="dp-aside-row"><span>Atrasadas</span><span class="dp-aside-val" style="color:#ef4444">3</span></div>
+                    <div class="dp-aside-row"><span>Mecânicos</span><span class="dp-aside-val">3 / 4</span></div>
+                    <div class="dp-aside-total"><span>Faturamento</span><span class="dp-aside-total-val" id="sbFat">R$ 0</span></div>
+                  </div>
+                  <div class="dp-aside-section">
+                    <div class="dp-aside-title">WhatsApp</div>
+                    <div class="dp-wpp-toast">
+                      <div class="dp-wpp-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                      </div>
+                      <div style="flex:1">
+                        <div class="dp-wpp-title">ABC-1234</div>
+                        <div class="dp-wpp-sub">Orçamento enviado</div>
+                      </div>
+                      <span class="dp-wpp-chip dp-wpp-typing" id="wppStatus">digitando...</span>
+                    </div>
+                    <div class="dp-new-toast" id="newOsToast" style="display:none">
+                      <div class="dp-new-toast-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                      </div>
+                      <div>
+                        <div class="dp-new-toast-title">Nova OS criada</div>
+                        <div class="dp-new-toast-sub">JKL-7890 · Onix</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ══ CONCESSIONÁRIA ══ -->
+          <div class="uc-screen-panel" [class.active]="activeTab==='concessionaria'">
+            <div class="dp-screen">
+              <div class="dp-topbar">
+                <div class="dp-search">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  <span id="searchConc">Buscar veículo, placa, cliente...</span>
+                </div>
+                <div class="dp-topbar-right">
+                  <div class="dp-icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                  </div>
+                  <div class="dp-avatar-sm">DR</div>
+                </div>
+              </div>
+
+              <div class="dp-page-hdr">
+                <div class="dp-page-hdr-left">
+                  <div class="dp-back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11"><polyline points="15 18 9 12 15 6"/></svg></div>
+                  <div>
+                    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+                      <span class="dp-order-num">Catálogo de Veículos</span>
+                      <span class="dp-badge b-green">24 unidades</span>
+                      <span class="dp-badge b-gray">Atualizado 09:32</span>
+                    </div>
+                    <div class="dp-page-meta">Concessionária Central · <b>Dianne Russell — Gerente</b></div>
+                  </div>
+                </div>
+                <div class="dp-page-hdr-right">
+                  <div style="display:flex;gap:5px" id="filterRow">
+                    <span class="dp-badge b-orange" id="fAll" style="cursor:pointer">Todos</span>
+                    <span class="dp-badge b-gray" id="fNew" style="cursor:pointer">Novos</span>
+                    <span class="dp-badge b-gray" id="fSemi" style="cursor:pointer">Seminovos</span>
+                  </div>
+                  <div class="dp-btn dp-btn-pri">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Cadastrar
+                  </div>
+                </div>
+              </div>
+
+              <div class="dp-body">
+                <div class="dp-main">
+                  <div class="dp-kpis">
+                    <div class="dp-kpi kpi-green"><div class="dp-kpi-val" id="kpiNew">0</div><div class="dp-kpi-lbl">Novos</div></div>
+                    <div class="dp-kpi kpi-amber"><div class="dp-kpi-val" id="kpiSemi">0</div><div class="dp-kpi-lbl">Seminovos</div></div>
+                    <div class="dp-kpi kpi-red"><div class="dp-kpi-val" id="kpiRes">0</div><div class="dp-kpi-lbl">Reservados</div></div>
+                    <div class="dp-kpi kpi-accent"><div class="dp-kpi-val">R$ 2.1M</div><div class="dp-kpi-lbl">Estoque total</div></div>
+                  </div>
+
+                  <div class="dp-card">
+                    <div class="dp-card-hdr"><span class="dp-card-title">Veículos disponíveis</span></div>
+                    <table class="dp-table">
+                      <thead>
+                        <tr>
+                          <th>Veículo</th>
+                          <th>Tipo</th>
+                          <th>Ano / KM</th>
+                          <th>Status</th>
+                          <th>Preço</th>
+                          <th>Ação</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="anim-row" data-type="new" id="carRow1" style="animation-delay:.05s">
+                          <td><div class="dp-product-cell"><div class="dp-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></div><div><div class="dp-prod-name">Toyota Corolla XEi</div><div class="dp-prod-idx">Placa: PBJ-2024</div></div></div></td>
+                          <td><span class="dp-badge b-green">Novo</span></td>
+                          <td>2024 / 0 km</td>
+                          <td><span class="dp-badge b-green" id="statusCar1">Disponível</span></td>
+                          <td class="dp-price-cell">R$ 148.990</td>
+                          <td><span class="dp-badge b-orange" id="btnRes1" style="cursor:pointer">Reservar</span></td>
+                        </tr>
+                        <tr class="anim-row" data-type="semi" style="animation-delay:.1s">
+                          <td><div class="dp-product-cell"><div class="dp-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></div><div><div class="dp-prod-name">Honda CR-V EX</div><div class="dp-prod-idx">Placa: RXM-5689</div></div></div></td>
+                          <td><span class="dp-badge b-orange">Seminovo</span></td>
+                          <td>2023 / 22.400 km</td>
+                          <td><span class="dp-badge b-green">Disponível</span></td>
+                          <td class="dp-price-cell">R$ 167.500</td>
+                          <td><span class="dp-badge b-orange" style="cursor:pointer">Reservar</span></td>
+                        </tr>
+                        <tr class="anim-row" data-type="new" id="carRow3" style="animation-delay:.15s">
+                          <td><div class="dp-product-cell"><div class="dp-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></div><div><div class="dp-prod-name">BMW 320i M Sport</div><div class="dp-prod-idx">Placa: QAZ-1024</div></div></div></td>
+                          <td><span class="dp-badge b-green">Novo</span></td>
+                          <td>2024 / 0 km</td>
+                          <td><span class="dp-badge b-gray" id="statusCar3">Reservado</span></td>
+                          <td class="dp-price-cell" style="text-decoration:line-through;color:#9aa3b2">R$ 289.990</td>
+                          <td><span class="dp-badge b-gray">Indisponível</span></td>
+                        </tr>
+                        <tr class="anim-row" data-type="new" style="animation-delay:.2s">
+                          <td><div class="dp-product-cell"><div class="dp-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></div><div><div class="dp-prod-name">Jeep Compass Longitude</div><div class="dp-prod-idx">Placa: TKL-7712</div></div></div></td>
+                          <td><span class="dp-badge b-green">Novo</span></td>
+                          <td>2024 / 0 km</td>
+                          <td><span class="dp-badge b-green">Disponível</span></td>
+                          <td class="dp-price-cell">R$ 198.990</td>
+                          <td><span class="dp-badge b-orange" style="cursor:pointer">Reservar</span></td>
+                        </tr>
+                        <tr class="anim-row" data-type="semi" style="animation-delay:.25s">
+                          <td><div class="dp-product-cell"><div class="dp-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></div><div><div class="dp-prod-name">Hyundai Creta Action</div><div class="dp-prod-idx">Placa: MNO-3301</div></div></div></td>
+                          <td><span class="dp-badge b-orange">Seminovo</span></td>
+                          <td>2022 / 31.200 km</td>
+                          <td><span class="dp-badge b-green">Disponível</span></td>
+                          <td class="dp-price-cell">R$ 109.900</td>
+                          <td><span class="dp-badge b-orange" style="cursor:pointer">Reservar</span></td>
+                        </tr>
+                        <tr class="anim-row" data-type="new" style="animation-delay:.3s">
+                          <td><div class="dp-product-cell"><div class="dp-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></div><div><div class="dp-prod-name">VW T-Cross Highline</div><div class="dp-prod-idx">Placa: SDF-8847</div></div></div></td>
+                          <td><span class="dp-badge b-green">Novo</span></td>
+                          <td>2024 / 0 km</td>
+                          <td><span class="dp-badge b-green">Disponível</span></td>
+                          <td class="dp-price-cell">R$ 162.490</td>
+                          <td><span class="dp-badge b-orange" style="cursor:pointer">Reservar</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="dp-aside">
+                  <div class="dp-aside-section">
+                    <div class="dp-aside-title">Estoque</div>
+                    <div class="dp-aside-row"><span>Novos</span><span class="dp-aside-val">14</span></div>
+                    <div class="dp-aside-row"><span>Seminovos</span><span class="dp-aside-val">10</span></div>
+                    <div class="dp-aside-row"><span>Reservados</span><span class="dp-aside-val" style="color:#ef4444">3</span></div>
+                    <div class="dp-aside-total"><span>Total</span><span class="dp-aside-total-val">24</span></div>
+                  </div>
+                  <div class="dp-aside-section">
+                    <div class="dp-aside-title">Valor em estoque</div>
+                    <div class="dp-aside-row"><span>Novos</span><span class="dp-aside-val">R$ 1.4M</span></div>
+                    <div class="dp-aside-row"><span>Seminovos</span><span class="dp-aside-val">R$ 0.7M</span></div>
+                    <div class="dp-aside-total"><span>Total</span><span class="dp-aside-total-val">R$ 2.1M</span></div>
+                  </div>
+                  <div class="dp-aside-section">
+                    <div class="dp-aside-title">Filtro ativo</div>
+                    <div id="filterStatus" style="font-size:12px;color:#374151;font-weight:600">Todos os veículos</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ══ AUTOPEÇAS ══ -->
+          <div class="uc-screen-panel" [class.active]="activeTab==='autopecas'">
+            <div class="dp-screen">
+              <div class="dp-topbar">
+                <div class="dp-search">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  <span>Buscar peça, código, fornecedor...</span>
+                </div>
+                <div class="dp-topbar-right">
+                  <div class="dp-icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                    <span class="dot"></span>
+                  </div>
+                  <div class="dp-avatar-sm">JS</div>
+                </div>
+              </div>
+
+              <div class="dp-page-hdr">
+                <div class="dp-page-hdr-left">
+                  <div class="dp-back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11"><polyline points="15 18 9 12 15 6"/></svg></div>
+                  <div>
+                    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+                      <span class="dp-order-num">#4821</span>
+                      <span class="dp-badge b-green">Pago</span>
+                      <span class="dp-badge b-blue" id="orcProgressBadge">● Em andamento</span>
+                    </div>
+                    <div class="dp-page-meta">Cliente: <b>João Silva · Toyota Corolla · FAZ-4821</b> · Última atualização: 08/03/2025 09:32 am</div>
+                  </div>
+                </div>
+                <div class="dp-btn">Cliente</div>
+              </div>
+
+              <div class="dp-body">
+                <div class="dp-main">
+                  <div class="dp-card">
+                    <div class="dp-card-hdr"><span class="dp-card-title">Progresso</span><span class="dp-badge b-orange" id="orcStatus">Aguardando aprovação</span></div>
+                    <div class="dp-prog-wrap">
+                      <div class="dp-prog-track">
+                        <div class="dp-prog-fill" id="orcFill" style="width:0%"></div>
+                        <div class="dp-prog-dots">
+                          <div class="dp-prog-dot done"></div>
+                          <div class="dp-prog-dot done"></div>
+                          <div class="dp-prog-dot active dot-pulse" id="dot2"></div>
+                          <div class="dp-prog-dot" id="dot3"></div>
+                          <div class="dp-prog-dot" id="dot4"></div>
+                        </div>
+                      </div>
+                      <div class="dp-prog-labels">
+                        <span class="dp-prog-lbl">Criado</span>
+                        <span class="dp-prog-lbl">Diagnóstico</span>
+                        <span class="dp-prog-lbl on">Enviado</span>
+                        <span class="dp-prog-lbl">Aprovado</span>
+                        <span class="dp-prog-lbl">Concluído</span>
+                      </div>
+                      <div class="dp-prog-footer">
+                        <div class="dp-status-label">
+                          Status:
+                          <span class="dp-badge b-blue" id="orcStatusInline">Enviando...</span>
+                        </div>
+                        <div class="dp-eta-label">Previsão: <b>Hoje 17:30</b></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="dp-card">
+                    <div class="dp-card-hdr"><span class="dp-card-title">Produtos</span><span class="dp-badge b-orange">5 itens</span></div>
+                    <table class="dp-table">
+                      <thead>
+                        <tr>
+                          <th>Nome</th>
+                          <th>Status</th>
+                          <th>Quantidade</th>
+                          <th>Depósito</th>
+                          <th>Preço unit.</th>
+                          <th>Total</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="anim-row" style="animation-delay:.08s">
+                          <td><div class="dp-product-cell"><div class="dp-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="15" height="15"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div><div><div class="dp-prod-name">Óleo Motor + Filtro</div><div class="dp-prod-idx">Castrol Edge 5W30 · 5L</div></div></div></td>
+                          <td><span class="dp-badge b-green">Pronto</span></td>
+                          <td>1</td>
+                          <td><span class="dp-link">Estoque A</span></td>
+                          <td class="dp-price-cell">R$ 180</td>
+                          <td class="dp-price-cell">R$ 180</td>
+                        </tr>
+                        <tr class="anim-row" style="animation-delay:.14s">
+                          <td><div class="dp-product-cell"><div class="dp-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="15" height="15"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><div><div class="dp-prod-name">Filtro de Ar</div><div class="dp-prod-idx">Mahle LX 3834</div></div></div></td>
+                          <td><span class="dp-badge b-green">Pronto</span></td>
+                          <td>1</td>
+                          <td><span class="dp-link">Estoque A</span></td>
+                          <td class="dp-price-cell">R$ 95</td>
+                          <td class="dp-price-cell">R$ 95</td>
+                        </tr>
+                        <tr class="anim-row" style="animation-delay:.2s;background:rgba(239,68,68,.02)">
+                          <td><div class="dp-product-cell"><div class="dp-thumb" style="border-color:rgba(239,68,68,.3)"><svg viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1.5" width="15" height="15"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div><div class="dp-prod-name">Pastilhas Freio Diant.</div><div class="dp-prod-idx">Cobreq N-924 — desgaste crítico</div></div></div></td>
+                          <td><span class="dp-badge b-red">Crítico ⚠</span></td>
+                          <td>1 jogo</td>
+                          <td><span class="dp-link">Estoque B</span></td>
+                          <td class="dp-price-cell">R$ 420</td>
+                          <td class="dp-price-cell">R$ 420</td>
+                        </tr>
+                        <tr class="anim-row" style="animation-delay:.26s">
+                          <td><div class="dp-product-cell"><div class="dp-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="15" height="15"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div><div><div class="dp-prod-name">Alinhamento + Balan.</div><div class="dp-prod-idx">4 rodas</div></div></div></td>
+                          <td><span class="dp-badge b-green">Pronto</span></td>
+                          <td>1</td>
+                          <td><span class="dp-link">Oficina</span></td>
+                          <td class="dp-price-cell">R$ 120</td>
+                          <td class="dp-price-cell">R$ 120</td>
+                        </tr>
+                        <tr class="anim-row" style="animation-delay:.32s">
+                          <td><div class="dp-product-cell"><div class="dp-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="15" height="15"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div><div class="dp-prod-name">Mão de obra</div><div class="dp-prod-idx">Técnico especializado</div></div></div></td>
+                          <td><span class="dp-badge b-blue">Serviço</span></td>
+                          <td>—</td>
+                          <td>—</td>
+                          <td class="dp-price-cell">R$ 425</td>
+                          <td class="dp-price-cell">R$ 425</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="dp-card">
+                    <div class="dp-card-hdr"><span class="dp-card-title">Atividade</span><div class="dp-btn" style="font-size:11px;padding:5px 10px">Add comment</div></div>
+                    <div class="dp-activity-wrap">
+                      <div class="dp-comment-row">
+                        <div class="dp-comment-input" id="commentInput">Adicionar comentário...</div>
+                        <div class="dp-comment-btn">Enviar</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dp-aside">
+                  <div class="dp-aside-section">
+                    <div class="dp-aside-title">Pagamento</div>
+                    <div class="dp-aside-row"><span>Subtotal peças</span><span class="dp-aside-val">R$ 815</span></div>
+                    <div class="dp-aside-row"><span>Mão de obra</span><span class="dp-aside-val">R$ 425</span></div>
+                    <div class="dp-aside-row"><span>Taxa 0%</span><span class="dp-aside-val">—</span></div>
+                    <div class="dp-aside-total"><span>Total</span><span class="dp-aside-total-val" id="totalValOrc">R$ 0</span></div>
+                    <div class="dp-payment-card">
+                      <div class="dp-visa">VISA</div>
+                      <span>Visa ···· 4821</span>
+                    </div>
+                  </div>
+                  <div class="dp-aside-section">
+                    <div class="dp-aside-title">Enviar via</div>
+                    <div class="dp-channels">
+                      <div class="dp-chan on" id="chanWpp">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        WPP
+                      </div>
+                      <div class="dp-chan" id="chanEmail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        Email
+                      </div>
+                    </div>
+                    <div class="dp-send-btn" id="sendBtn">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                      Enviar orçamento
+                    </div>
+                    <div class="dp-sent-box" id="sentConfirm" style="display:none">
+                      <div class="dp-sent-ico">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" width="11" height="11"><polyline points="20 6 9 17 4 12"/></svg>
+                      </div>
+                      <div>
+                        <div class="dp-sent-title">Enviado!</div>
+                        <div class="dp-sent-sub">João · WhatsApp</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dp-aside-section">
+                    <div class="dp-aside-title">Cliente</div>
+                    <div class="dp-customer-card">
+                      <div class="dp-cust-av">JS</div>
+                      <div>
+                        <div class="dp-cust-name">João Silva</div>
+                        <div class="dp-cust-sub">VIP · 12 visitas</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dp-aside-section">
+                    <div class="dp-aside-title">Depósitos</div>
+                    <div class="dp-courier-list">
+                      <div class="dp-courier-item active">Estoque A</div>
+                      <div class="dp-courier-item">Estoque B</div>
+                      <div class="dp-courier-item">Oficina</div>
+                    </div>
+                  </div>
+                  <div class="dp-approval-box anim-approval" id="approvalBox" style="display:none">
+                    <div class="dp-approval-title">🎉 Aprovado!</div>
+                    <div class="dp-approval-sub">João Silva · agora</div>
+                    <div class="dp-approval-btn">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11"><polyline points="20 6 9 17 4 12"/></svg>
+                      Iniciar OS
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ══ ESTÉTICA ══ -->
+          <div class="uc-screen-panel" [class.active]="activeTab==='estetica'">
+            <div class="dp-screen">
+              <div class="dp-topbar">
+                <div class="dp-search">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  <span>Buscar serviço, cliente, data...</span>
+                </div>
+                <div class="dp-topbar-right">
+                  <div class="dp-icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                  </div>
+                  <div class="dp-avatar-sm">AG</div>
+                </div>
+              </div>
+
+              <div class="dp-page-hdr">
+                <div class="dp-page-hdr-left">
+                  <div class="dp-back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11"><polyline points="15 18 9 12 15 6"/></svg></div>
+                  <div>
+                    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+                      <span class="dp-order-num">Relatório · Fevereiro 2025</span>
+                      <span class="dp-badge b-green badge-pulse">↑ +18% vs jan</span>
+                    </div>
+                    <div class="dp-page-meta">Studio Auto Gloss · <b>Ana Gomes — Gerente</b></div>
+                  </div>
+                </div>
+                <div class="dp-page-hdr-right">
+                  <div class="dp-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Exportar PDF
+                  </div>
+                  <div class="dp-btn dp-btn-pri">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Agendar
+                  </div>
+                </div>
+              </div>
+
+              <div class="dp-body">
+                <div class="dp-main">
+                  <div class="dp-kpis">
+                    <div class="dp-kpi kpi-green"><div class="dp-kpi-val" id="kpiOsEst">0</div><div class="dp-kpi-lbl">OS / mês</div><div class="dp-kpi-delta up">+22 vs jan</div></div>
+                    <div class="dp-kpi kpi-accent"><div class="dp-kpi-val" id="kpiFatEst">R$ 0</div><div class="dp-kpi-lbl">Faturamento</div><div class="dp-kpi-delta up">+R$ 14k</div></div>
+                    <div class="dp-kpi kpi-purple"><div class="dp-kpi-val" id="kpiSat">0%</div><div class="dp-kpi-lbl">Satisfação</div><div class="dp-kpi-delta up">+2%</div></div>
+                    <div class="dp-kpi kpi-blue"><div class="dp-kpi-val" id="kpiRet">0%</div><div class="dp-kpi-lbl">Retorno</div><div class="dp-kpi-delta up">clientes fiéis</div></div>
+                  </div>
+
+                  <div class="dp-chart-pair">
+                    <div class="dp-card" style="margin-bottom:0">
+                      <div class="dp-card-hdr"><span class="dp-card-title">Ticket médio por serviço</span></div>
+                      <div class="dp-svc-list">
+                        <div class="dp-svc-row anim-svc" style="--d:.1s">
+                          <div class="dp-svc-header"><span><span class="dp-svc-dot" style="background:#e8540a"></span>Polimento Cristalizado</span><span class="dp-svc-val">R$ 890</span></div>
+                          <div class="dp-svc-track"><div class="dp-svc-bar" style="--w:89%;background:linear-gradient(90deg,#e8540a,#f97316)"></div></div>
+                        </div>
+                        <div class="dp-svc-row anim-svc" style="--d:.2s">
+                          <div class="dp-svc-header"><span><span class="dp-svc-dot" style="background:#8b5cf6"></span>PPF / Película</span><span class="dp-svc-val">R$ 740</span></div>
+                          <div class="dp-svc-track"><div class="dp-svc-bar" style="--w:74%;background:linear-gradient(90deg,#8b5cf6,#a78bfa)"></div></div>
+                        </div>
+                        <div class="dp-svc-row anim-svc" style="--d:.3s">
+                          <div class="dp-svc-header"><span><span class="dp-svc-dot" style="background:#3b82f6"></span>Vitrificação</span><span class="dp-svc-val">R$ 620</span></div>
+                          <div class="dp-svc-track"><div class="dp-svc-bar" style="--w:62%;background:linear-gradient(90deg,#3b82f6,#60a5fa)"></div></div>
+                        </div>
+                        <div class="dp-svc-row anim-svc" style="--d:.4s">
+                          <div class="dp-svc-header"><span><span class="dp-svc-dot" style="background:#f59e0b"></span>Higienização Interna</span><span class="dp-svc-val">R$ 340</span></div>
+                          <div class="dp-svc-track"><div class="dp-svc-bar" style="--w:34%;background:linear-gradient(90deg,#f59e0b,#fcd34d)"></div></div>
+                        </div>
+                        <div class="dp-svc-row anim-svc" style="--d:.5s">
+                          <div class="dp-svc-header"><span><span class="dp-svc-dot" style="background:#10b981"></span>Lavagem Detalhada</span><span class="dp-svc-val">R$ 210</span></div>
+                          <div class="dp-svc-track"><div class="dp-svc-bar" style="--w:21%;background:linear-gradient(90deg,#10b981,#34d399)"></div></div>
+                        </div>
+                      </div>
+                      <div class="dp-fidel-wrap">
+                        <div style="font-size:11px;font-weight:700;color:#374151">Clientes que retornaram este mês</div>
+                        <div class="dp-fidel-track"><div class="dp-fidel-bar" id="fidelBar"></div></div>
+                        <div class="dp-fidel-row"><span class="dp-fidel-pct">72%</span><span class="dp-fidel-lbl">dos clientes retornaram</span></div>
+                      </div>
+                    </div>
+
+                    <div class="dp-card" style="margin-bottom:0">
+                      <div class="dp-card-hdr">
+                        <span class="dp-card-title">Próximos agendamentos</span>
+                        <div class="dp-btn dp-btn-pri" style="font-size:10px;padding:4px 9px">+ Agendar</div>
+                      </div>
+                      <div class="dp-agenda">
+                        <div class="dp-agenda-day anim-agenda" style="--d:.15s">
+                          <div class="dp-agenda-date">Seg · 10/03</div>
+                          <div class="dp-agenda-slots">
+                            <div class="dp-slot s-orange"><span class="dp-slot-time">09:00</span><div class="dp-slot-info"><b>Polimento</b> · Gol Branco · Marcos</div></div>
+                            <div class="dp-slot s-blue"><span class="dp-slot-time">14:00</span><div class="dp-slot-info"><b>Vitrificação</b> · Civic · Ana</div></div>
+                            <div class="dp-slot s-purple"><span class="dp-slot-time">16:30</span><div class="dp-slot-info"><b>PPF</b> · Corolla · Ricardo</div></div>
+                          </div>
+                        </div>
+                        <div class="dp-agenda-day anim-agenda" style="--d:.3s">
+                          <div class="dp-agenda-date">Ter · 11/03</div>
+                          <div class="dp-agenda-slots">
+                            <div class="dp-slot s-green"><span class="dp-slot-time">10:00</span><div class="dp-slot-info"><b>Higienização</b> · HB20 · Fernanda</div></div>
+                            <div class="dp-slot s-orange"><span class="dp-slot-time">15:00</span><div class="dp-slot-info"><b>Polimento</b> · Cruze · Paulo</div></div>
+                          </div>
+                        </div>
+                        <div class="dp-agenda-day anim-agenda" style="--d:.45s">
+                          <div class="dp-agenda-date">Qua · 12/03</div>
+                          <div class="dp-agenda-slots">
+                            <div class="dp-slot s-purple"><span class="dp-slot-time">09:00</span><div class="dp-slot-info"><b>PPF parcial</b> · BMW · Luiz</div></div>
+                            <div class="dp-slot s-amber"><span class="dp-slot-time">13:00</span><div class="dp-slot-info"><b>Lavagem</b> · Onix · Clara</div></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="dp-booking-toast anim-toast" id="newBooking" style="display:none">
+                        <div class="dp-booking-icon">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        </div>
+                        <div>
+                          <div class="dp-booking-title">Novo agendamento!</div>
+                          <div class="dp-booking-sub">Qui 13/03 · 10:00 · Polimento · Astra</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dp-aside">
+                  <div class="dp-aside-section">
+                    <div class="dp-aside-title">Resumo fev/25</div>
+                    <div class="dp-aside-row"><span>OS concluídas</span><span class="dp-aside-val">284</span></div>
+                    <div class="dp-aside-row"><span>Ticket médio</span><span class="dp-aside-val">R$ 330</span></div>
+                    <div class="dp-aside-row"><span>Novos clientes</span><span class="dp-aside-val">38</span></div>
+                    <div class="dp-aside-row"><span>Retorno</span><span class="dp-aside-val" style="color:#e8540a">72%</span></div>
+                    <div class="dp-aside-total"><span>Faturamento</span><span class="dp-aside-total-val">R$ 94k</span></div>
+                  </div>
+                  <div class="dp-aside-section">
+                    <div class="dp-aside-title">Satisfação</div>
+                    <div class="dp-aside-row"><span>⭐⭐⭐⭐⭐</span><span class="dp-aside-val">89%</span></div>
+                    <div class="dp-aside-row"><span>⭐⭐⭐⭐</span><span class="dp-aside-val">8%</span></div>
+                    <div class="dp-aside-row"><span>⭐⭐⭐ ou menos</span><span class="dp-aside-val">3%</span></div>
+                    <div class="dp-aside-total"><span>NPS</span><span class="dp-aside-total-val">97%</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,28 +3,18 @@
     <div class="eyebrow"><span>Integrações</span></div>
     <h2 class="sec-title rt">Conecte tudo que<br />você já <span class="hl-r">usa</span></h2>
     <p class="sec-sub">
-      Integre com mais de 40 plataformas. Notas fiscais, pagamentos, fornecedores e muito mais em um
-      clique.
+      Integre com as principais plataformas do setor. Notas fiscais, pagamentos,
+      localização e atendimento em um só lugar.
     </p>
   </div>
 
   <div class="int-grid">
     @for (int of integrations; track int.name) {
       <div class="int-card" data-aos="fade-up">
-        <div class="int-logo" [style.background]="int.bg">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#111"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            style="width: 1.2em; height: 1.2em"
-            [innerHTML]="int.svg"
-          ></svg>
+        <div class="int-logo">
+          <span [innerHTML]="int.svg"></span>
         </div>
         <div class="int-name">{{ int.name }}</div>
-
         @if (int.badge) {
           <div class="int-badge" [class]="int.badge.type">{{ int.badge.text }}</div>
         }

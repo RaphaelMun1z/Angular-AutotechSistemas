@@ -12,6 +12,7 @@
   align-items: start;
 }
 
+/* ── Stepper ── */
 .con-stepper-col {
   display: flex;
   flex-direction: column;
@@ -23,7 +24,7 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: rgba(255, 255, 255, 0.22);
+  color: var(--txm);
   margin-bottom: 12px;
 }
 
@@ -38,10 +39,10 @@
   content: '';
   position: absolute;
   left: 19px;
-  top: 28px;
-  bottom: 28px;
+  top: 48px;
+  bottom: 48px;
   width: 2px;
-  background: var(--cb2);
+  background: var(--ltB);
   border-radius: 999px;
   z-index: 0;
 }
@@ -49,14 +50,14 @@
 .con-line {
   position: absolute;
   left: 19px;
-  top: 28px;
+  top: 48px;
   width: 2px;
-  height: calc(100% - 56px);
+  height: calc(100% - 96px);
   background: var(--red);
   border-radius: 999px;
-  box-shadow: 0 0 10px rgba(246, 37, 0, 0.7);
+  box-shadow: 0 0 10px rgba(246, 37, 0, 0.35);
   transition: transform 0.5s;
-  z-index: 2;
+  z-index: 0;
   transform-origin: top center;
   transform: scaleY(var(--progress-scale, 0));
 }
@@ -75,14 +76,16 @@
   height: 40px;
   border-radius: 5px;
   transform: skewX(-8deg);
-  background: var(--c0);
-  border: 2px solid var(--cb2);
+  background: #f4f4ef;
+  border: 2px solid rgba(0, 0, 0, 0.12);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(0, 0, 0, 0.25);
   transition: all 0.3s;
   flex-shrink: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .con-step-ico svg {
@@ -96,27 +99,30 @@
   font-weight: 700;
   text-transform: uppercase;
   font-style: italic;
-  color: #111;
+  color: rgba(0, 0, 0, 0.3);
   white-space: nowrap;
+  transition: color 0.3s;
 }
 
 .con-step.on .con-step-ico {
   border-color: var(--red);
-  color: #111;
-  box-shadow: 0 0 14px rgba(220, 20, 60, 0.25);
-  background: rgba(220, 20, 60, 0.08);
+  color: var(--red);
+  box-shadow: 0 0 14px rgba(246, 37, 0, 0.18);
+  /* fundo sólido para cobrir a linha vermelha por baixo */
+  background: #fdf1ef;
 }
 
 .con-step.on .con-step-txt {
-  color: #111;
+  color: var(--txd);
 }
 
+/* ── Formulário ── */
 .contact-form {
   background: var(--c0);
   padding: clamp(22px, 3.5vw, 36px);
   border-radius: 10px;
   border: 1px solid var(--cb2);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
   border-top: 4px solid var(--blue);
 }
 
@@ -159,6 +165,11 @@
   transition: border-color 0.3s, box-shadow 0.3s;
   outline: none;
   resize: none;
+}
+
+.fg input::placeholder,
+.fg textarea::placeholder {
+  color: rgba(255, 255, 255, 0.2);
 }
 
 .fg input:focus,
@@ -218,11 +229,16 @@
   transform: skewX(8deg);
 }
 
-.form-sub:hover {
+.form-sub:hover:not(:disabled) {
   background: var(--gy);
   color: var(--txd);
   transform: skewX(-8deg) translateY(-2px);
   box-shadow: 0 12px 28px rgba(255, 204, 0, 0.35);
+}
+
+.form-sub:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
 @media (max-width: 1024px) {

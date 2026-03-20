@@ -1,7 +1,7 @@
 .contact-info-only {
   background: var(--lt);
   padding: clamp(70px, 10vw, 110px) 20px 24px;
-  border-top: 1px solid var(--cb);
+  border-top: 1px solid var(--ltB);
 }
 
 .contact-info-inner {
@@ -13,6 +13,7 @@
   margin-top: 14px;
   margin-bottom: 28px;
   max-width: 760px;
+  color: var(--txm);
 }
 
 .con-items {
@@ -27,13 +28,60 @@
   gap: 12px;
 }
 
+/* Item clicável (WhatsApp) */
+.con-item--link {
+  text-decoration: none;
+  color: inherit;
+  background: rgba(37, 211, 102, 0.06);
+  border: 1px solid rgba(37, 211, 102, 0.25);
+  border-radius: 10px;
+  padding: 12px 16px;
+  transition: background 0.22s, border-color 0.22s, transform 0.22s;
+  position: relative;
+}
+
+.con-item--link:hover {
+  background: rgba(37, 211, 102, 0.11);
+  border-color: rgba(37, 211, 102, 0.5);
+  transform: translateX(4px);
+}
+
+.con-item--link .con-info p {
+  color: #128c3e;
+}
+
+/* Badge "Resposta rápida" */
+.con-wa-badge {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 9px;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #128c3e;
+  background: rgba(37, 211, 102, 0.12);
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  padding: 3px 9px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* Ícone WhatsApp com fundo verde */
+.con-ico--wa {
+  background: rgba(37, 211, 102, 0.1);
+  border-color: rgba(37, 211, 102, 0.25);
+}
+
 .con-ico {
   width: 40px;
   height: 40px;
   border-radius: 6px;
   transform: skewX(-8deg);
-  background: var(--c3);
-  border: 1px solid var(--cb2);
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,12 +100,12 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--txm);
   margin-bottom: 2px;
 }
 
 .con-info p {
   font-size: 13px;
   font-weight: 700;
-  color: #fff;
+  color: var(--txd);
 }
