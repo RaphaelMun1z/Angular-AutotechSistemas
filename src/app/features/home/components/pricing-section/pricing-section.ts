@@ -63,9 +63,9 @@ export class PricingSection {
       title: 'Site & Landing Page',
       pricePrefix: 'a partir de',
       currency: 'R$',
-      priceMain: '999',
-      priceCents: ',90',
-      installments: 'ou 12x de R$ 83,32 no cartão',
+      priceMain: '899',
+      priceCents: ',91',
+      installments: 'ou 12x de R$ 83,33 no cartão',
       description:
         'Presença digital focada em captação de clientes. Ideal para oficinas que querem ser encontradas no Google e receber orçamentos direto no WhatsApp.',
       features: [
@@ -102,8 +102,8 @@ export class PricingSection {
       title: 'Sistema de Gestão',
       pricePrefix: 'a partir de',
       currency: 'R$',
-      priceMain: '1.499',
-      priceCents: ',90',
+      priceMain: '1.349',
+      priceCents: ',91',
       installments: 'ou 12x de R$ 124,99 no cartão',
       description:
         'Software web sob medida para organizar a rotina da oficina. Abandone o papel e tenha controle total sobre orçamentos, veículos e histórico.',
@@ -137,7 +137,6 @@ export class PricingSection {
         { icon: '🤝', title: 'Sistema é seu, para sempre', desc: 'Pagamento único. Não é SaaS, não tem mensalidade. O sistema é desenvolvido e entregue para você.' },
       ],
     },
-
     {
       id: 'combo',
       icon: 'combo',
