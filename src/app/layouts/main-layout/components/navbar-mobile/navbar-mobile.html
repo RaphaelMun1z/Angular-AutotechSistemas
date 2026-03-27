@@ -1,19 +1,40 @@
-<div class="mob-overlay" id="mobOverlay" [class.active]="isMenuOpen" aria-hidden="true" (click)="onClose()"></div>
-<nav class="mob-menu" id="mobMenu" [class.active]="isMenuOpen" aria-label="Menu mobile" [attr.aria-hidden]="!isMenuOpen">
+<div
+  class="mob-overlay"
+  id="mobOverlay"
+  [class.active]="isMenuOpen"
+  aria-hidden="true"
+  (click)="onClose()"
+></div>
+
+<nav
+  class="mob-menu"
+  id="mobMenu"
+  [class.active]="isMenuOpen"
+  aria-label="Menu mobile"
+  [attr.aria-hidden]="!isMenuOpen"
+>
   <div class="mob-drawer-head">
     <a href="#hero" class="mob-drawer-logo" aria-label="Ir para o inicio" (click)="onClose()">
       <img src="AutotechLogo.png" alt="Autotech Logo" class="autotech-logo" />
     </a>
-    <button type="button" class="mob-close" aria-label="Fechar menu mobile" (click)="onClose()">&times;</button>
+    <button type="button" class="mob-close" aria-label="Fechar menu mobile" (click)="onClose()">
+      &times;
+    </button>
   </div>
 
   <div class="mob-nav">
     <a href="#hero" (click)="onClose()">In&iacute;cio <span class="mob-nav-arrow">&rarr;</span></a>
     <a href="#features" (click)="onClose()">Recursos <span class="mob-nav-arrow">&rarr;</span></a>
-    <a href="#usecases" (click)="onClose()">Casos de Uso <span class="mob-nav-arrow">&rarr;</span></a>
-    <a href="#benefits" (click)="onClose()">Benef&iacute;cios <span class="mob-nav-arrow">&rarr;</span></a>
+    <a href="#usecases" (click)="onClose()"
+      >Casos de Uso <span class="mob-nav-arrow">&rarr;</span></a
+    >
+    <a href="#benefits" (click)="onClose()"
+      >Benef&iacute;cios <span class="mob-nav-arrow">&rarr;</span></a
+    >
     <div class="mob-nav-divider"></div>
-    <a href="#integrations" (click)="onClose()">Integra&ccedil;&otilde;es <span class="mob-nav-arrow">&rarr;</span></a>
+    <a href="#integrations" (click)="onClose()"
+      >Integra&ccedil;&otilde;es <span class="mob-nav-arrow">&rarr;</span></a
+    >
     <a href="#pricing" (click)="onClose()">Planos <span class="mob-nav-arrow">&rarr;</span></a>
     <a href="#blog" (click)="onClose()">Blog <span class="mob-nav-arrow">&rarr;</span></a>
     <div class="mob-nav-divider"></div>
@@ -22,7 +43,32 @@
 
   <div class="mob-drawer-foot">
     <div class="mob-social-row">
-      <a href="https://www.instagram.com/autotech.sistemas/" target="_blank" class="mob-soc" aria-label="Instagram da Autotech" title="Instagram da Autotech">
+      <a
+        href="https://wa.me/5511992467155?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20planos%20da%20Autotech."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mob-soc"
+        aria-label="WhatsApp da Autotech"
+        title="Falar no WhatsApp"
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+          />
+          <path
+            d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.122 1.532 5.857L.057 23.215a.75.75 0 0 0 .916.932l5.453-1.43A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.718 9.718 0 0 1-4.953-1.354l-.355-.211-3.676.964.982-3.589-.232-.369A9.718 9.718 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"
+          />
+        </svg>
+      </a>
+
+      <a
+        href="https://www.instagram.com/autotech.sistemas/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mob-soc"
+        aria-label="Instagram da Autotech"
+        title="Instagram da Autotech"
+      >
         <svg
           viewBox="0 0 24 24"
           fill="none"
@@ -34,21 +80,6 @@
           <rect x="2" y="2" width="20" height="20" rx="5" />
           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-        </svg>
-      </a>
-      <a href="#" class="mob-soc" aria-label="YouTube da Autotech" title="YouTube da Autotech" (click)="$event.preventDefault()">
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path
-            d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"
-          />
-          <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
         </svg>
       </a>
     </div>

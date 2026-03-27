@@ -168,11 +168,10 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ═══ RESPONSIVE ═══ */
 @media (max-width: 980px) {
   .nav-wrap {
     padding: 14px 16px 0;
-	max-width: 100vw;
+    max-width: 100vw;
   }
 
   .nav-bar {
@@ -180,20 +179,19 @@
     max-width: none;
   }
 
+  /* AUMENTADO: Tamanho da logo no tablet */
   .nav-logo {
-    min-width: 160px;
+    min-width: 180px; /* Aumentado de 160px */
     padding: 0 16px 0 18px;
   }
 
-  .nav-logo,
-  .mob-drawer-logo,
-  .footer-brand a.footer-logo-wrap {
-    padding: 0 16px 0 18px;
+  .autotech-logo {
+    height: 35px; /* Aumentado */
   }
 
   .nav-links a {
     font-size: 10px;
-    padding: 6px 10px;
+    padding: 6px 8px; /* Reduzido padding lateral para caber */
   }
 
   .nav-right {
@@ -218,34 +216,49 @@
   }
 
   .nav-bar {
-    height: 56px;
+    height: 58px; /* Ligeiramente mais alto para acomodar a logo maior */
     max-width: none;
   }
 
+  /* AUMENTADO: Tamanho da logo no mobile */
   .nav-logo {
-    min-width: 132px;
-    padding: 0 14px 0 16px;
+    min-width: 140px; /* Aumentado de 132px */
+    padding: 0 12px 0 14px;
     border-right: none;
   }
 
   .autotech-logo {
-    height: 24px;
+    height: 35px; /* Aumentado de 24px */
     width: auto;
     max-width: 100%;
   }
 
-  .nav-links,
-  .nav-soc,
-  .nav-cta {
+  /* Esconde os links de texto da barra */
+  .nav-links {
     display: none;
   }
 
+  /* AJUSTE: Área da direita */
   .nav-right {
     margin-left: auto;
     border-left: none;
     padding: 0 10px 0 0;
+    gap: 8px; /* Espaço entre o botão Portfólio e o Hambúrguer */
   }
 
+  /* MUDANÇA CRUCIAL: Esconde as redes sociais APENAS na barra de navegação */
+  .nav-right .nav-soc {
+    display: none;
+  }
+
+  /* Mantém o botão Portfólio visível e ajusta tamanho */
+  .nav-right .nav-cta {
+    display: inline-flex; /* Garante que apareça */
+    font-size: 9px;
+    padding: 6px 12px;
+  }
+
+  /* Mostra o hambúrguer */
   .nav-hbg {
     display: flex;
   }
@@ -269,13 +282,29 @@
     padding: 10px 10px 0;
   }
 
+  .nav-bar {
+    height: 54px;
+  }
+
+  /* AUMENTADO: Mantendo a logo com bom tamanho em telas pequenas */
   .nav-logo {
     min-width: 120px;
-    padding: 0 12px 0 14px;
+    padding: 0 8px 0 10px;
   }
 
   .autotech-logo {
-    height: 22px;
+    height: 35px; /* Aumentado de 22px */
+  }
+
+  .nav-right {
+    gap: 6px; 
+  }
+
+  /* Botão Portfólio ainda menor para caber */
+  .nav-right .nav-cta {
+    font-size: 8px;
+    padding: 5px 9px;
+    letter-spacing: 0.5px;
   }
 
   .nav-hbg span {
@@ -285,19 +314,48 @@
   }
 }
 
-.autotech-logo-main-nav {
-  font:
-    900 italic 16px 'Atyp',
-    sans-serif;
-  fill: #fff;
-  letter-spacing: 3px;
+/* ============================================================
+   ESTILOS PARA AS REDES SOCIAIS DENTRO DO MENU LATERAL (DRAWER)
+   (Adicione isto ao final do seu CSS)
+   ============================================================ */
+
+/* Supondo que seu drawer tenha a classe .mob-drawer */
+.mob-drawer-soc {
+  margin-top: auto; /* Empurra para o final do menu */
+  padding: 20px;
+  border-top: 1px solid var(--cb2);
+  text-align: center;
 }
 
-.autotech-logo-sub-nav {
-  font:
-    800 7px 'Atyp',
-    sans-serif;
-  fill: var(--red);
-  letter-spacing: 5px;
+.mob-drawer-soc p {
+  font-size: 10px;
   text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.mob-drawer-soc .soc-links-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Ajustando o estilo dos ícones dentro do drawer */
+.mob-drawer-soc .nav-soc {
+  display: flex; /* Garante que apareça aqui */
+  color: #fff; /* Ícones brancos no menu */
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.mob-drawer-soc .nav-soc:hover {
+  background: var(--red);
+}
+
+.mob-drawer-soc .nav-soc svg {
+  width: 18px; /* Ícones um pouco maiores no menu */
+  height: 18px;
 }
